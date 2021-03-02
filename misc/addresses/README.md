@@ -18,7 +18,7 @@
 | xSUSHI-STABLEx-CoreProxy | [https://etherscan.io/address/0xc3A5A0dC6241C922937c5cd90F5bACE23716AFB7](%20https://etherscan.io/address/0xc3A5A0dC6241C922937c5cd90F5bACE23716AFB7) |
 | ibETH-STABLEx-CoreProxy | [https://etherscan.io/address/0x81f16E6B58738DaAA4C5D493a240cCA49C240f04](%20https://etherscan.io/address/0x81f16E6B58738DaAA4C5D493a240cCA49C240f04) |
 | imUSD-STABLEx-CoreProxy | [https://etherscan.io/address/0x066b7660b2003793fB2ffD0b8152158c016fbfeF](https://etherscan.io/address/0x066b7660b2003793fB2ffD0b8152158c016fbfeF) |
-| wstETH-STABLEx-CoreProxy | [https://etherscan.io/address/0x596e255594f95568b6777d1cfcc1db86ab7772a7](https://etherscan.io/address/0x596e255594f95568b6777d1cfcc1db86ab7772a7) |
+| wstETH-STABLEx-CoreProxy | [https://etherscan.io/address/0xC466Ec062D554BEB42f1766488F7345261C63616](%20https://etherscan.io/address/0xC466Ec062D554BEB42f1766488F7345261C63616) |
 |  |  |
 
 ## Farms
