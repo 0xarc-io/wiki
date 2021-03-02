@@ -5,8 +5,8 @@
 | Contract Name | Address |
 | :--- | :--- |
 | ARCx Token | [https://etherscan.io/address/0xed30dd7e50edf3581ad970efc5d9379ce2614adb](https://etherscan.io/address/0xed30dd7e50edf3581ad970efc5d9379ce2614adb) |
-| ARC DAO | [https://etherscan.io/address/0x1DEBBC50322150EB44DE3b663d5faA89c12b07ff](https://etherscan.io/address/0x1DEBBC50322150EB44DE3b663d5faA89c12b07ff) |
-| SynthRegistryV1 | [https://etherscan.io/address/0x372a4D34e9E9d96656F101aFf06a4a455396C974](https://etherscan.io/address/0x372a4D34e9E9d96656F101aFf06a4a455396C974) |
+| ARCx DAO | [https://etherscan.io/address/0x1DEBBC50322150EB44DE3b663d5faA89c12b07ff](https://etherscan.io/address/0x1DEBBC50322150EB44DE3b663d5faA89c12b07ff) |
+| SynthRegistryV2 | [https://etherscan.io/address/0xeB739e889E74383562695D94C495F5F69F9E2559](https://etherscan.io/address/0xeB739e889E74383562695D94C495F5F69F9E2559) |
 
 ## STABLEx
 
