@@ -9,7 +9,7 @@
 | ARCx DAO \(Treasury\) | [https://etherscan.io/address/0x4317d259fcce32ebbb508c27b12f4afaca074ae3](https://etherscan.io/address/0x4317d259fcce32ebbb508c27b12f4afaca074ae3) |
 | SynthRegistryV2 | [https://etherscan.io/address/0xeB739e889E74383562695D94C495F5F69F9E2559](https://etherscan.io/address/0xeB739e889E74383562695D94C495F5F69F9E2559) |
 | WhitelistSale-Phase1 | [https://etherscan.io/address/0x2D6c5b9fF886bb4eEFed33b2065366F4caa0e6Fe](https://etherscan.io/address/0x2D6c5b9fF886bb4eEFed33b2065366F4caa0e6Fe) |
-|  |  |
+| WhitelistSale-Phase2 | [https://etherscan.io/address/0xF2057de81Eb26C09d4421Cb6B0C222b9a656f8f3](https://etherscan.io/address/0xF2057de81Eb26C09d4421Cb6B0C222b9a656f8f3) |
 
 ## STABLEx
 
