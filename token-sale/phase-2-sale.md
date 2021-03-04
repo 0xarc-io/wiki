@@ -4,14 +4,14 @@ Users who have participated in minting StableX and who have provided liquidity t
 
 There are a total of 1200 ARCx tokens as well as any tokens left over from the Phase 1 sale that have been allocated to this round, with a price of 6,500 USDC per ARCx token.
 
-The sale will start on the 4th March 2021 and end on the 5th March 2021
+The sale will start on the 4th March 2021 and end on the 9th March 2021
 
 **The Curve pool itself is hosted on https://app.arcx.money/exchange not on https://curve.fi**
 
 ### Details:
 
 * Eligibility period: January 20th to March 3rd, 2021 \(UTC\)
-* Sale: March 4 to March 5, 2021
+* Sale: March 4th to March 9th, 2021
 * Exclusively available to users who have minted STABLEx and provided liquidity for STABLEx on Uniswap or Curve for since the launch of Farm \#5 \(19th Jan\). 
 * Price: $6,500 per token, representing a $65m fully diluted valuation.
 * ARCx available for purchase: 1200 tokens, plus any remaining tokens from Phase 1 \(12% + roll over from phase 1\)
