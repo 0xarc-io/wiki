@@ -11,6 +11,7 @@
 | WhitelistSale-Phase1 | [https://etherscan.io/address/0x2D6c5b9fF886bb4eEFed33b2065366F4caa0e6Fe](https://etherscan.io/address/0x2D6c5b9fF886bb4eEFed33b2065366F4caa0e6Fe) |
 | WhitelistSale-Phase2 | [https://etherscan.io/address/0xF2057de81Eb26C09d4421Cb6B0C222b9a656f8f3](https://etherscan.io/address/0xF2057de81Eb26C09d4421Cb6B0C222b9a656f8f3) |
 | STABLEx-3CRV-f-2 | [https://etherscan.io/address/0x3252efd4ea2d6c78091a1f43982ee2c3659cc3d1](https://etherscan.io/address/0x3252efd4ea2d6c78091a1f43982ee2c3659cc3d1) |
+| TokenClaim | [https://etherscan.io/address/0x562423f830582B6F704E175c439E132e59058284](https://etherscan.io/address/0x562423f830582B6F704E175c439E132e59058284) |
 
 ## STABLEx
 
