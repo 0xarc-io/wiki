@@ -4,6 +4,7 @@
 * [Core Concepts](core-concepts.md)
 * [Maintaining Peg](maintaining-peg.md)
 * [Liquidations](liquidations.md)
+* [ARCx Token](arcx-token.md)
 * [Yield Farming](yield-farming.md)
 * [Risks](risks.md)
 * [FAQ](faq.md)
