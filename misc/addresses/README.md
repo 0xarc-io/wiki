@@ -5,8 +5,9 @@
 | Contract Name | Address |
 | :--- | :--- |
 | ARCx Token | [https://etherscan.io/address/0xed30dd7e50edf3581ad970efc5d9379ce2614adb](https://etherscan.io/address/0xed30dd7e50edf3581ad970efc5d9379ce2614adb) |
-| ARCx Distributor | [https://etherscan.io/address/0x1DEBBC50322150EB44DE3b663d5faA89c12b07ff](https://etherscan.io/address/0x1DEBBC50322150EB44DE3b663d5faA89c12b07ff) |
-| ARCx Guardian | [https://etherscan.io/address/0xc434C28Da5940462213C0057660a7132337205c1](https://etherscan.io/address/0xc434C28Da5940462213C0057660a7132337205c1) |
+| ARCx Distributor DAO | [https://etherscan.io/address/0x1DEBBC50322150EB44DE3b663d5faA89c12b07ff](https://etherscan.io/address/0x1DEBBC50322150EB44DE3b663d5faA89c12b07ff) |
+| ARCx Guardian DAO | [https://etherscan.io/address/0xc434C28Da5940462213C0057660a7132337205c1](https://etherscan.io/address/0xc434C28Da5940462213C0057660a7132337205c1) |
+| ARCx Protocol DAO | [https://etherscan.io/address/0x859A95b2b50c1FC25560A2C6daD5b3D0ba34B6E9](https://etherscan.io/address/0x859A95b2b50c1FC25560A2C6daD5b3D0ba34B6E9) |
 | ARCx DAO \(Treasury\) | [https://etherscan.io/address/0x4317d259fcce32ebbb508c27b12f4afaca074ae3](https://etherscan.io/address/0x4317d259fcce32ebbb508c27b12f4afaca074ae3) |
 | SynthRegistryV2 | [https://etherscan.io/address/0xeB739e889E74383562695D94C495F5F69F9E2559](https://etherscan.io/address/0xeB739e889E74383562695D94C495F5F69F9E2559) |
 | WhitelistSale-Phase1 | [https://etherscan.io/address/0x2D6c5b9fF886bb4eEFed33b2065366F4caa0e6Fe](https://etherscan.io/address/0x2D6c5b9fF886bb4eEFed33b2065366F4caa0e6Fe) |
