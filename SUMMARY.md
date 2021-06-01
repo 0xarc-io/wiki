@@ -1,13 +1,19 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Core Concepts](core-concepts.md)
-* [Maintaining Peg](maintaining-peg.md)
-* [Liquidations](liquidations.md)
-* [ARCx Token](arcx-token.md)
-* [Yield Farming](yield-farming.md)
-* [Risks](risks.md)
-* [FAQ](faq.md)
+
+## General
+
+* [How to Apply for a DeFi Passport](general/how-to-apply-for-a-defi-passport.md)
+* [What is a Credit Score?](general/what-is-a-credit-score.md)
+* [How the Credit Score is Used](general/how-the-credit-score-is-used.md)
+
+## Token and Governance
+
+* [ARCx Governance Token \(ARCX\)](token-and-governance/arcx-governance-token-arcx.md)
+* [ARCx Token \(Technical\)](token-and-governance/arcx-tokenomics.md)
+* [ARCX Token Split and Migration](token-and-governance/arcx-token-split-and-migration.md)
+* [Proposals and Voting](token-and-governance/proposals-and-voting.md)
 
 ## Misc
 
@@ -15,9 +21,6 @@
 * [Contract Addresses](misc/addresses/README.md)
   * [Archive](misc/addresses/archive.md)
 * [Official Links](misc/official-links.md)
-
-## Token Sale
-
-* [Phase 1 Sale](token-sale/kyf-sale.md)
-* [Phase 2 Sale](token-sale/phase-2-sale.md)
+* [Phase 1 Sale](misc/kyf-sale.md)
+* [Phase 2 Sale](misc/phase-2-sale.md)
 

@@ -1,29 +1,27 @@
 # Introduction
 
-## **Background**
+## What is ARCx?
 
-ARCx is a synthetic asset protocol that unlocks the liquidity of your interest earning assets through our native stable-coin STABLEx. 
 
-Current stable coin designs generally fall within a couple of broad categories:
 
-* **Centralised Services** such as USDC and USDT offer strong protection to users as tokens are backed 1:1 by USD. However risks include centralisation risk and intervention from governments or central governing bodies
-* **Elastic Supply Coins** usually involve some form of rebasing mechanism \(ESD, Ampleforth\) however aren't collateral backed. There is the potential scenario for loss in confidence which means that peg is unable to be maintained. 
-* **Over-collateralised Coins** such as MakerDAO and SNX create confidence in the coin however isn't a perfect scenario given it's inability to maintain a stable peg. Additionally over-collateralised coins are highly capital inefficient 
+ARCx is a decentralized scoring protocol that powers on-chain identity through the issuance of a DeFi Passport.
 
-## **STABLEx**
+The first page, or element, in the DeFi Passport is an on-chain credit score. This initial score is issued to an identity based on an assessment of the address’ on-chain activity. More details on this metric and its assessment are on a [dedicated Wiki page describing the Credit Score](https://wiki.arcx.money/general/what-is-a-credit-score).
 
-STABLEx is a stable coin that takes the learnings from all of the various projects listed above to create a more efficient stable coin product that is able to maintain a tight peg. It has the following characteristics:
+## What can I do with a DeFi Passport?
 
-1. **Partial Collateral**: the system as a whole will be partially collateralised which will improve on the deficiencies of Elastic Supply Coins and provide confidence in maintaining the peg
-2. **Governance Controlled Variables**: from algorithm stable coin experiments we have seen that a fully algorithmic coin does not maintain a tight peg yet. As such the design currently allows for governance to control and update the various levers. This will allow for faster learnings on how to maintain the peg
+During Phase 1 of the launch, identities who have been issued their DeFi Passport can access ‘Passport Enabled Farms,' which exclusively offer high APYs that are incentivized by ARCx and our genesis launch partners.
 
-### Key Levers
+With time, DeFi Passport holders will then be issued with a Credit Score which will mark the commencement of Phase 2. This Credit Score can then enable dynamic terms for borrowing depending on the borrower themselves.
 
-More details will be outlined in the Core Concepts however at a high level the following are the levers governance has control over
+## Looking Forward
 
-1. **Savings Rate**: the amount of STABLEx that is created and sent to holders of STABLEx \(seignorage concept taken from ESD, Basis Cash etc\)
-2. **Interest Rate**: the interest rate is how much minters will be paying on their debt \(concept from MakerDAO\)
-3. **Collateral Ratio**: this is the amount of collateral that is required in the vault. The lower the number the higher leverage
+The ARCx DeFi Passport is designed to be a staple of users and protocols in Decentralized Finance on multiple blockchains. Beyond the ARCx Credit Score constituting its first page, the applications are endless for the pseudonymous, decentralized profiling and assessment of identities based on on-chain activity.
 
-Try the app on main-net at: [http://app.arcx.money](https://app.arcx.money)
+In the near future, ARCx plans to continue to add more scores and pages to the DeFi Passport. These would include:
+
+* “Yield Farming Scores” that evaluates whether a farmer has a long-term mindset, which shows support for a protocol's long term growth---as opposed to farming and immediately selling. A higher Yield Farming score based on these parameters could potentially enable favorable APY to incentivize a higher quality and activist community.
+* “Airdrop Score” that evaluates whether an address on-chain holds airdrops---again, showing support for a protocol's long term growth---or immediately sells their tokens.
+* “Governance Score” that signals to protocols and builders how actively a user is involved in on-chain governance. Beyond metrics of activity in governance, the kinds of decisions a user makes on-chain and the nature of their governance in given protocol\(s\) could be very telling of motives and future behavior.
+* “Trader Scores” which determine the differences between bots and real identities to give different rates based on how a protocol wants to interact with a counterparty. For example, a DEX could enable lower trading fees for identities compared to that for bots
 
