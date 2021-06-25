@@ -16,11 +16,11 @@ Because ARCX is focusing on identity first in its DeFi Passport, it first aims t
 
 #### Why Incentivize Liquidity Providers \('Liquidity Mining'\)?
 
-Finally, since AMM liquidity pools open up liquidity providers to potential 'impermanent loss' \(IL\) and 'inventory loss,' rewarding liquidity providers in ARCX is meant to avoid these sources of loss. [This twitter thread \(1/19\) provides a brief introductions to these sources of loss.](https://twitter.com/haydenzadams/status/1374795486398459908)
+Since AMM liquidity pools open up liquidity providers to potential 'impermanent loss' \(IL\) and 'inventory loss,' rewarding liquidity providers in ARCX is meant to avoid these sources of loss. [This twitter thread \(1/19\) provides a brief introductions to these sources of loss.](https://twitter.com/haydenzadams/status/1374795486398459908)
 
 #### Why Sushiswap?
 
-Sushiswap is originally a fork of Uniswap focused on egalitarian distribution profits and decentralized governance. ARCX is focused on embracing decentralization and anti-fragility as it forms into a DAO, so Sushiswap is aligned with these principles and chosen as the first DEX to incentivize. [This video provides a detailed explanation of all of the features of Sushiswap](https://www.youtube.com/watch?v=Cbtvc8Eso_g), which ARCX would hope to leverage in the near future.
+Sushiswap is originally a fork of Uniswap focused on egalitarian profit distribution and decentralized governance. The ARCx DAO is focused on embracing decentralization and community, so Sushiswap was chosen as the first DEX to incentivize. [This video provides a detailed explanation of all of the features of Sushiswap](https://www.youtube.com/watch?v=Cbtvc8Eso_g), which ARCX would hope to leverage in the near future.
 
 ARCX is incentivizing liquidity providers to the Sushiswap ARCX/ETH pool \(done on Sushiswap's user interface\) with a high-yield farm \(on ARCX's user interface\). This process is a bit complicated for new users, so it is detailed below with video tutorials by community member @Blaze07 on Discord \(Blaze07\#9274\)
 
@@ -51,8 +51,6 @@ Your SLP token is a distinct token from ETH or ARCX and it may not appear in you
 {% embed url="https://www.youtube.com/watch?v=rR46wcTRJEU" %}
 
 {% hint style="warning" %}
-Note there is a small bug with the ARCx app UI that does not show you successfully staked until you refresh the page. ARCX DeFi Passport will launch with an entirely new app UI soon, so the workaround now is to refresh the page as shown in the video.
+Note there is a small bug with the ARCx app UI that may not update your successful staked position until you refresh the page.
 {% endhint %}
-
-
 
