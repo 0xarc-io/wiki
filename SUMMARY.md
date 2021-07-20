@@ -18,6 +18,7 @@
 
 ## Misc
 
+* [Meeting Calendar](misc/meeting-calendar.md)
 * [Direct Contract Interaction](misc/direct-contract-interaction.md)
 * [Contract Addresses](misc/addresses/README.md)
   * [Archive](misc/addresses/archive.md)
