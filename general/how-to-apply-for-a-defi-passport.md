@@ -4,7 +4,7 @@ With security being a paramount concern, the rollout of the ARCx DeFi Passport w
 
 The first batch, or Batch \#01 will consist of 100 different addresses. The identities who are in this first batch will receive a [‘First Edition’ version of the DeFi Passport](https://twitter.com/arcxmoney), which will provide that identity with benefits within the ARCx ecosystem. Batch \#02 will then receive a ‘Second Edition’ version of the DeFi Passport, and so on. 
 
-To apply for a batch, you must visit [arcx.money](https://app.arcx.money), connect your wallet, and send 1000 DAI to join the waitlist. To minimize bad actors and encourage long-term engagement, identities who deposit the DAI to join the waitlist will have their DAI held as a deposit for an amount of time published on the application page, which ultimately may change based on the edition of the DeFi Passport. For example, the First Edition DeFi Passport may hold this deposit for one year, while future editions of the DeFi Passport may hold the deposit for multiple years.
+To apply for a batch, you must visit [arcx.money](https://app.arcx.money), connect your wallet, and send ARCX tokens to join the waitlist. To minimize bad actors and encourage long-term engagement, identities who deposit the ARCX to join the waitlist will have their tokens held as a deposit for an amount of time published on the application page, which ultimately may change based on the edition of the DeFi Passport. For example, the First Edition DeFi Passport may hold this deposit for one year, while future editions of the DeFi Passport may hold the deposit for multiple years.
 
 Early ARCx DeFi Passport holders will benefit by:
 
