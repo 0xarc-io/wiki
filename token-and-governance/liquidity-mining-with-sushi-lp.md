@@ -4,6 +4,8 @@ description: How to stake ARCX/ETH LP and receive ARCX rewards
 
 # Liquidity Mining with Sushi LP
 
+#### \*\*\*\*[**The liquidity mining pool can be located here**](https://app.arcx.money/farms/Pool-9)
+
 ## Intention and Basics of Liquidity Pools \(LPs\)
 
 #### Why is Liquidity important to ARCX?
@@ -29,10 +31,6 @@ ARCX is incentivizing liquidity providers to the Sushiswap ARCX/ETH pool \(done 
 To provide liquidity, your wallet must first have some ARCX token. This can be most readily bought on Sushiswap itself.
 
 {% embed url="https://www.youtube.com/watch?v=iPIED0JHw-I" caption="How to buy ARCX on Sushiswap" %}
-
-{% hint style="info" %}
- ARCX is not in the default token list for Sushiswap. The easiest way to select it for exchange is to add the Coingecko token list in the Sushiswap UI. Or, even more precise, is to directly input the ARCX 'contract address' \([0x1321f1f1aa541a56c31682c57b80ecfccd9bb288](https://etherscan.io/address/0x1321f1f1aa541a56c31682c57b80ecfccd9bb288)\) as shown in the video.
-{% endhint %}
 
 ## Adding ETH/ARCX Liquidity to Sushiswap
 

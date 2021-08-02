@@ -7,6 +7,8 @@
 * [How to Apply for a DeFi Passport](general/how-to-apply-for-a-defi-passport.md)
 * [What is a Credit Score?](general/what-is-a-credit-score.md)
 * [How the Credit Score is Used](general/how-the-credit-score-is-used.md)
+* [Essential Resources](general/official-links/README.md)
+  * [Written articles](general/official-links/written-articles.md)
 
 ## Token and Governance
 
@@ -22,7 +24,6 @@
 * [Direct Contract Interaction](misc/direct-contract-interaction.md)
 * [Contract Addresses](misc/addresses/README.md)
   * [Archive](misc/addresses/archive.md)
-* [Official Links](misc/official-links.md)
 * [Phase 1 Sale](misc/kyf-sale.md)
 * [Phase 2 Sale](misc/phase-2-sale.md)
 
