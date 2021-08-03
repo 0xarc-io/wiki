@@ -15,8 +15,9 @@ description: >-
 ## **Learn more** 
 
 [**ARCx homepage:**](https://arcx.money/) ****Where it all begins.  
-[**Blog:** ](https://arcx.substack.com/)The ARCx substack where all the official announcements and articles are posted.  
-[**Engineering updates:**](https://arcx.canny.io/changelog) Frequent posts from the developers at ARCx. 
+[**Announcements:** ](https://arcx.substack.com/)The ARCx substack where all the official announcements and articles are posted.  
+[**Weekly Newsletter:**](https://medium.com/arcxmoney) Where we catch up on what's been happening at ARCx.  
+[**Engineering updates:**](https://arcx.canny.io/changelog) Posts from the developers at ARCx. 
 
 ## Check out some writings on ARCx
 
