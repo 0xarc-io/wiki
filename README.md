@@ -1,4 +1,8 @@
-# Introduction
+---
+description: Join our community as we unlock the power of on-chain identity.
+---
+
+# Welcome to ARCx
 
 ## What is ARCx?
 

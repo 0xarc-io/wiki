@@ -1,21 +1,18 @@
 # Table of contents
 
-* [Introduction](README.md)
-
-## General
-
-* [How to Apply for a DeFi Passport](general/how-to-apply-for-a-defi-passport.md)
-* [What is a Credit Score?](general/what-is-a-credit-score.md)
-* [How the Credit Score is Used](general/how-the-credit-score-is-used.md)
-* [Passport Skins](general/passport-skins.md)
-* [Essential Resources](general/official-links/README.md)
-  * [Written articles](general/official-links/written-articles.md)
+* [Welcome to ARCx](README.md)
+* [DeFi Passport](how-to-apply-for-a-defi-passport/README.md)
+  * [What is a Credit Score?](how-to-apply-for-a-defi-passport/what-is-a-credit-score.md)
+  * [How the Credit Score is Used](how-to-apply-for-a-defi-passport/how-the-credit-score-is-used.md)
+  * [Passport Skins](how-to-apply-for-a-defi-passport/passport-skins.md)
+* [Essential Resources](official-links/README.md)
+  * [Written articles](official-links/written-articles.md)
 
 ## Token and Governance
 
-* [ARCx Governance Token \(ARCX\)](token-and-governance/arcx-governance-token-arcx.md)
-* [ARCx Token \(Technical\)](token-and-governance/arcx-tokenomics.md)
-* [ARCX Token Split and Migration](token-and-governance/arcx-token-split-and-migration.md)
+* [ARCx Governance Token \(ARCX\)](token-and-governance/arcx-governance-token-arcx/README.md)
+  * [ARCX Token Split and Migration](token-and-governance/arcx-governance-token-arcx/arcx-token-split-and-migration.md)
+  * [ARCx Token \(Technical\)](token-and-governance/arcx-governance-token-arcx/arcx-tokenomics.md)
 * [Proposals and Voting](token-and-governance/proposals-and-voting.md)
 * [Liquidity Mining with Sushi LP](token-and-governance/liquidity-mining-with-sushi-lp.md)
 
