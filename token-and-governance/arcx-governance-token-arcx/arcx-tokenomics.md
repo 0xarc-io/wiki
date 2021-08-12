@@ -13,6 +13,7 @@ Listed below are all the addresses related to the ARCx token.
 | [**0x88CDF983117505Fee6433277D14C298ECfBEeAd6**](https://etherscan.io/address/0x88CDF983117505Fee6433277D14C298ECfBEeAd6) | **Vested Core team tokens.** Initial lock up for 6+6 months, vested continuously for 36 months after. Total 4 year vesting. 15.5% total, 1% allocated to $KERMAN holders \(see below\) |
 | [**0x75Aa7a55df3BD077c3238a5eB9722290a4c8A3C0**](https://etherscan.io/address/0x75Aa7a55df3BD077c3238a5eB9722290a4c8A3C0) | **Vested Angel round tokens.** Initial lock up for 6+6 months, earned continuously via emissions for a total of 4 years. |
 | [**0xBaDADFcac026820Af874b9ed52d4D19435b6cf0B**](https://etherscan.io/address/0xBaDADFcac026820Af874b9ed52d4D19435b6cf0B) | **Additional  Core team \(social token\) allocation.** 1% \(from the Core team 15.5%\) is distributed to $KERMAN holders. More details around claiming for this will be made in the coming months. |
+| \*\*\*\*[**0x2Db5553872382De018efD3eB36B7e077dBf3b8f3**](https://etherscan.io/address/0x2Db5553872382De018efD3eB36B7e077dBf3b8f3)\*\*\*\* | **ARCx Growth Allocation Address.** Treasury allocation managed by the Llama team. [Details here.](https://forum.arcx.money/t/introducing-arcx-growth-allocation-i-deploy-treasury-productively/61) |
 
 **Note:** 6+6 months refers to 6-months pre-token tradability and 6-months post-token tradability. This was a decision taken by the Core team and Angel investors to ensure that the token tradability event was as fair as possible to network participants.
 
