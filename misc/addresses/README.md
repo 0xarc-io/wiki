@@ -6,6 +6,7 @@
 | :--- | :--- |
 | ARCx Token | [https://etherscan.io/address/0x1321f1f1aa541a56c31682c57b80ecfccd9bb288](https://etherscan.io/address/0x1321f1f1aa541a56c31682c57b80ecfccd9bb288#code) |
 | ARCx Token \(Old\) | [https://etherscan.io/address/0xed30dd7e50edf3581ad970efc5d9379ce2614adb](https://etherscan.io/address/0xed30dd7e50edf3581ad970efc5d9379ce2614adb) |
+| stARCx Token | [https://etherscan.io/address/0x9bfFAd7A6d5F52dBC51cAE33E419793C72fD7d9D](%20https://etherscan.io/address/0x9bfFAd7A6d5F52dBC51cAE33E419793C72fD7d9D) |
 | ARCx Emissions Distributor | [https://etherscan.io/address/0x7E32b84f3ED40787ACdaF91303317B78A6fAe470](https://etherscan.io/address/0x7E32b84f3ED40787ACdaF91303317B78A6fAe470) |
 | ARCx Emissions Distributor \(Old\) | [https://etherscan.io/address/0x1DEBBC50322150EB44DE3b663d5faA89c12b07ff](https://etherscan.io/address/0x1DEBBC50322150EB44DE3b663d5faA89c12b07ff) |
 | ARCx Guardian DAO | [https://etherscan.io/address/0xc434C28Da5940462213C0057660a7132337205c1](https://etherscan.io/address/0xc434C28Da5940462213C0057660a7132337205c1) |
