@@ -22,7 +22,7 @@
 
 | Name | Address |
 | :--- | :--- |
-| DeFi Passport | [https://etherscan.io/address/0x933492b6B7038A7e4f14b64DEFe40463F9bc3508](https://etherscan.io/address/0x933492b6B7038A7e4f14b64DEFe40463F9bc3508) |
+| DeFiPassport | [https://etherscan.io/address/0x933492b6B7038A7e4f14b64DEFe40463F9bc3508](https://etherscan.io/address/0x933492b6B7038A7e4f14b64DEFe40463F9bc3508) |
 | WaitlistBatch | [https://etherscan.io/address/0xEF8f8e370722Ae405449Cb4cC6864AA0B4a7E6a0](https://etherscan.io/address/0xEF8f8e370722Ae405449Cb4cC6864AA0B4a7E6a0) |
 | SapphireCreditScore | [https://etherscan.io/address/0x427d3B028fb15a06C2d75be8E8a2238aAd41ed3A](https://etherscan.io/address/0x427d3B028fb15a06C2d75be8E8a2238aAd41ed3A) |
 
