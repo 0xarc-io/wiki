@@ -21,7 +21,7 @@ The `Passport` component fetches an address' information from our backend server
 Install our package either through `yarn` or `npm`
 
 ```text
-npm install @arcxmoney/passport-js
+npm install @arcxmoney/passport-js --save
 ```
 
 ### Implementation
@@ -31,7 +31,7 @@ The `Passport` component is an absolute positioned component written to load on 
 Below is an example of how to combine the `useWeb3React` hook with the `Passport` component
 
 ```text
-import { Passport } from '@arcxmoney/arxc-game';
+import { Passport } from '@arcxmoney/passport-js';
 import { useWeb3React } from '@web3-react/core'
 
 const Page = () => {
