@@ -6,7 +6,9 @@ description: Display a user's DeFi Passport in your app
 
 ### Introduction
 
-Passport.js ノ is a small React library that offers interactive components to display an individual's DeFi passport in your application. 
+Passport.js ノ is a small React library that offers interactive components to display an individual's DeFi passport in your application.
+
+[Check out the demo here](https://passport-js-example.netlify.app/)
 
 ### How it works
 
