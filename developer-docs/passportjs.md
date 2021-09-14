@@ -10,6 +10,8 @@ Passport.js ノ is a small React library that offers interactive components to d
 
 [Check out the demo here](https://passport-js-example.netlify.app/)
 
+Here's a demo address you can use to test if an account has a DeFi Passport: \``0xE4FbF25Aa95363EFF2fF6459476763B34F7c190B`
+
 ### How it works
 
 The `Passport` component fetches an address' information from our backend servers and upon success returns the user's passport video.
