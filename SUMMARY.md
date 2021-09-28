@@ -29,4 +29,5 @@
 ## Developer Docs
 
 * [Passport.js](developer-docs/passportjs.md)
+* [Verifying Passports](developer-docs/verifying-passports.md)
 
