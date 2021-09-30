@@ -25,7 +25,7 @@
 * [Phase 2 Sale](misc/phase-2-sale.md)
 * [Disclaimer for lost tokens](misc/disclaimer-for-lost-tokens.md)
 
-## Developer Docs
+## Developers <a id="developer-docs"></a>
 
 * [Passport.js](developer-docs/passportjs.md)
 * [Verifying Passports](developer-docs/verifying-passports.md)
