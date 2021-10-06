@@ -11,6 +11,7 @@
 ## Token and Governance
 
 * [ARCx Governance Token \(ARCX\)](token-and-governance/arcx-governance-token-arcx/README.md)
+  * [Tokenomics](token-and-governance/arcx-governance-token-arcx/tokenomics.md)
   * [ARCX Token Split and Migration](token-and-governance/arcx-governance-token-arcx/arcx-token-split-and-migration.md)
   * [ARCx Token \(Technical\)](token-and-governance/arcx-governance-token-arcx/arcx-tokenomics.md)
 * [Proposals and Voting](token-and-governance/proposals-and-voting.md)
