@@ -21,8 +21,6 @@
 * [Direct Contract Interaction](misc/direct-contract-interaction.md)
 * [Contract Addresses](misc/addresses/README.md)
   * [Archive](misc/addresses/archive.md)
-* [Phase 1 Sale](misc/kyf-sale.md)
-* [Phase 2 Sale](misc/phase-2-sale.md)
 * [Disclaimer for lost tokens](misc/disclaimer-for-lost-tokens.md)
 
 ## Developers <a id="developer-docs"></a>
