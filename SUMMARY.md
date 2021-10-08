@@ -15,7 +15,6 @@
   * [ARCX Token Split and Migration](token-and-governance/arcx-governance-token-arcx/arcx-token-split-and-migration.md)
   * [ARCx Token \(Technical\)](token-and-governance/arcx-governance-token-arcx/arcx-tokenomics.md)
 * [Proposals and Voting](token-and-governance/proposals-and-voting.md)
-* [Liquidity Mining with Sushi LP](token-and-governance/liquidity-mining-with-sushi-lp.md)
 
 ## Misc
 
