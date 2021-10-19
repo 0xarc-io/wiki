@@ -1,40 +1,34 @@
 ---
-description: Display a user's DeFi Passport in your app
+description: Display the ARCx DeFi Passport in your dApp.
 ---
 
 # Passport.js
 
 ### Introduction
 
-Passport.js ノ is a small React library that offers interactive components to display an individual's DeFi passport in your application.
+`Passport.js`  is a small `React.js` component which displays a wallet's DeFi passport.&#x20;
 
-[Check out the demo here](https://passport-js-example.netlify.app/)
+![Live demo ](../.gitbook/assets/passportjs.gif)
 
-Here's a demo address you can use to test if an account has a DeFi Passport: \``0xE4FbF25Aa95363EFF2fF6459476763B34F7c190B`
+### Install
 
-### How it works
+`Passport.js` is available with both  `yarn` and `npm`.
 
-The `Passport` component fetches an address' information from our backend servers and upon success returns the user's passport video.
-
- If the user has no DeFi passport, no widget will be shown.
-
-![Passport component](../.gitbook/assets/defi-passport.gif)
-
-### Installation
-
-Install our package either through `yarn` or `npm`
-
-```text
+```
 npm install @arcxmoney/passport-js --save
 ```
 
-### Implementation
+```
+yarn add @arcxmoney/passport-js 
+```
 
-The `Passport` component is an absolute positioned component written to load on top of your application. We recommend placing it higher up your component tree for readability, but also inside your Web3 provider.
+### Basic Usage
 
-Below is an example of how to combine the `useWeb3React` hook with the `Passport` component
+Once installed, import the `Passport` component and use it anywhere in your application.&#x20;
 
-```text
+Here is a basic example using the `useWeb3React` hook with the `Passport` component
+
+```
 import { Passport } from '@arcxmoney/passport-js';
 import { useWeb3React } from '@web3-react/core'
 
@@ -48,36 +42,63 @@ const Page = () => {
 }
 ```
 
-### Styling
+### Additional Parameters
 
-The underlying `<video />` component is fully customizable through the `videoStyles` prop.
+The only required parameter is `account`, all other properties are optional. Default values can be seen below:
 
-```text
+```
 <Passport
-    videoStyles={{ border: '3px solid red' }}
-    account={USER_ADDRESS} 
+    account= '0x123...123', //REQUIRED
+    width = 256,
+    height = 256,
+    position = 'fixed',
+    chainId = '1',
+    arcxUrl = 'https://api.arcx.money', 
+    closable = true,
+    analytics = true,
 />
 ```
 
 #### Passport Properties
 
-| Name | Description | Required? | Default Value |
-| :--- | :--- | :---: | :---: |
-| **account** | The user's address. | Yes |  |
-| **analytics** | Voluntary prop to activate if you wish to help us out by sharing metrics. 🙂 | No | true |
-| **videoStyles** | Customize styles for the  underlying video component. | No | Default Styles |
+<table><thead><tr><th>Property</th><th data-type="select">Type</th><th>Description</th><th data-type="checkbox" data-hidden>Required?</th></tr></thead><tbody><tr><td><strong>account</strong></td><td></td><td>The associated address with a DeFi Passport. If an address does not have a DeFi Passport, the component will not display anything.</td><td>true</td></tr><tr><td><strong>width</strong></td><td></td><td>The width of the component.</td><td>false</td></tr><tr><td><strong>height</strong></td><td></td><td>The heigh of the component.</td><td>false</td></tr><tr><td><strong>position</strong></td><td></td><td><p>Behaviour of position:</p><ul><li><code>fixed</code> : Have the passport float in the lower right corner of the screen</li><li><code>flex</code> : Display the passport where the component is placed.</li></ul></td><td>false</td></tr><tr><td><strong>chainId</strong></td><td></td><td>Chain identifier of connected network.</td><td>false</td></tr><tr><td><strong>arcxUrl</strong></td><td></td><td>Endpoint to fetch passport metadata.</td><td>false</td></tr><tr><td><strong>closeable</strong></td><td></td><td>Allow the component to be dismissed.</td><td>false</td></tr><tr><td><strong>analytics</strong></td><td></td><td>Participate in providing metrics to the ARCx engineering team. </td><td>false</td></tr></tbody></table>
 
-### Roadmap
+### How it works
 
-We will be actively working on this library to help other protocols and builders integrate DeFi Passports and reputation.  
-  
-**Here's a small list of things currently being worked on** 
+If an address has no DeFi passport, nothing shall be shown.
 
-* [x] Interactive video component
-* [ ] Utility functions for retrieving an account's passport information
-* [ ] Fully interactive WebGL Passport component
+This package simply fetches an address' information from our [API](verifying-passports.md) and uses WebGL + CSS to wrap everything into a nice `React.js` component. It's a light-weight package to help with the integration of the DeFi Passport into any dApp which wants to integrate with us.
 
-If you have any questions or suggestions, feel free to raise an issue in our repository.  
-  
+
+
+### Help
+
+If you have any questions or suggestions, we'd love your input on our [discord server](https://discord.com/invite/skwz6je).\
+\
 Happy building! ノ
 
+
+
+### Changelog
+
+As seen in [npm registry](https://www.npmjs.com/package/@arcxmoney/passport-js).
+
+#### \[1.0.3] - 2021-10-18
+
+* Fixed issue with metrics tracking
+* Changed arcxUrl default value to stable endpoint
+
+#### \[1.0.2] - 2021-10-13
+
+* Added WebGL properties
+* Added cross-chain support
+
+#### \[1.0.1] - 2021-10-13
+
+* Fixed bug with the front image
+* Removed score on the back-side
+* Added ability to dismiss
+
+#### \[1.0.0] - 2021-10-08
+
+* Add package on NPM

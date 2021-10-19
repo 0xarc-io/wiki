@@ -1,12 +1,12 @@
 ---
-description: A brief guide on how to check if an address holds a valid DeFi Passport
+description: A brief guide on accessing our different
 ---
 
-# Verifying Passports
+# API
 
 ### Introduction
 
-When a user receives a DeFi Passport, you can be assured that they've passed some basic criteria around activity for their wallet. For example, the current criteria ensures that they have: 
+When a user receives a DeFi Passport, you can be assured that they've passed some basic criteria around activity for their wallet. For example, the current criteria ensures that they have:&#x20;
 
 * 30 Days of wallet history
 * Interacted with more than 5 unique address
@@ -19,7 +19,7 @@ This can be valuable if you're a developer and want some basic assurances around
 
 If you'd like to check if a user has DeFi Passport directly on-chain here are the steps you need to take:
 
-1. Call `tokenOfOwnerByIndex(address, 0)` on the DeFi Passport ERC721 contract \([0x933492b6B7038A7e4f14b64DEFe40463F9bc3508](https://etherscan.io/address/0x933492b6B7038A7e4f14b64DEFe40463F9bc3508)\), where`address` is the address you'd like to check has a valid passport
+1. Call `tokenOfOwnerByIndex(address, 0)` on the DeFi Passport ERC721 contract ([0x933492b6B7038A7e4f14b64DEFe40463F9bc3508](https://etherscan.io/address/0x933492b6B7038A7e4f14b64DEFe40463F9bc3508)), where`address` is the address you'd like to check has a valid passport
 2. **That's it.** If the user has a valid passport you'll get the ERC721 token id of their DeFi Passport. A single address cannot have more than one DeFi Passport so the token id you receive is guaranteed to be unique.
 
 We've designed the passport to be highly interoperable within DeFi and we hope you find it easy to integrate with as well.
@@ -32,7 +32,7 @@ In the case that you'd like to check if a user has a DeFi Passport via a REST AP
 
 Here's an example response for the address [0xFEC18996C36D02902E4c55bcFB7A1c73AA1500Cd](https://api.arcx.money/passports/0xFEC18996C36D02902E4c55bcFB7A1c73AA1500Cd):
 
-```text
+```
 {
   "address": "0xFEC18996C36D02902E4c55bcFB7A1c73AA1500Cd",
   "status": "active",
@@ -55,9 +55,8 @@ Here's an example response for the address [0xFEC18996C36D02902E4c55bcFB7A1c73AA
 }
 ```
 
-We hope you find this useful as an integration guide of how to incorporate the DeFi Passport into your dApp. 
+We hope you find this useful as an integration guide of how to incorporate the DeFi Passport into your dApp.&#x20;
 
 **If you have any questions please don't hestitate to drop into our Discord to ask any questions!**
 
-\*\*\*\*
-
+****

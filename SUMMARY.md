@@ -10,10 +10,10 @@
 
 ## Token and Governance
 
-* [ARCx Governance Token \(ARCX\)](token-and-governance/arcx-governance-token-arcx/README.md)
+* [ARCx Governance Token (ARCX)](token-and-governance/arcx-governance-token-arcx/README.md)
   * [Tokenomics](token-and-governance/arcx-governance-token-arcx/tokenomics.md)
   * [ARCX Token Split and Migration](token-and-governance/arcx-governance-token-arcx/arcx-token-split-and-migration.md)
-  * [ARCx Token \(Technical\)](token-and-governance/arcx-governance-token-arcx/arcx-tokenomics.md)
+  * [ARCx Token (Technical)](token-and-governance/arcx-governance-token-arcx/arcx-tokenomics.md)
 * [Proposals and Voting](token-and-governance/proposals-and-voting.md)
 
 ## Misc
@@ -23,8 +23,8 @@
   * [Archive](misc/addresses/archive.md)
 * [Disclaimer for lost tokens](misc/disclaimer-for-lost-tokens.md)
 
-## Developers <a id="developer-docs"></a>
+## Developers <a href="developer-docs" id="developer-docs"></a>
 
+* [API](developer-docs/verifying-passports.md)
 * [Passport.js](developer-docs/passportjs.md)
-* [Verifying Passports](developer-docs/verifying-passports.md)
-
+* [Smart Contracts](developer-docs/smart-contracts.md)
