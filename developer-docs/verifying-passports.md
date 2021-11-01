@@ -285,6 +285,10 @@ Response:
 
 
 
-**If you have any questions or comments, join us on **[**Discord**](https://discord.com/invite/arcx)****
+### Help
+
+If you have any questions or suggestions, we'd love your input on our [discord server](https://discord.com/invite/skwz6je).\
+\
+Happy building! ノ
 
 ****

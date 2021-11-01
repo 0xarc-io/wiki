@@ -18,13 +18,14 @@
 | STABLEx-3CRV-f-2                 | [https://etherscan.io/address/0x3252efd4ea2d6c78091a1f43982ee2c3659cc3d1](https://etherscan.io/address/0x3252efd4ea2d6c78091a1f43982ee2c3659cc3d1)      |
 | TokenClaim                       | [https://etherscan.io/address/0x562423f830582B6F704E175c439E132e59058284](https://etherscan.io/address/0x562423f830582B6F704E175c439E132e59058284)      |
 
-## DeFi Passport
+## ARCx Passport
 
-| Name                | Address                                                                                                                                            |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| DeFiPassport        | [https://etherscan.io/address/0x933492b6B7038A7e4f14b64DEFe40463F9bc3508](https://etherscan.io/address/0x933492b6B7038A7e4f14b64DEFe40463F9bc3508) |
-| WaitlistBatch       | [https://etherscan.io/address/0xEF8f8e370722Ae405449Cb4cC6864AA0B4a7E6a0](https://etherscan.io/address/0xEF8f8e370722Ae405449Cb4cC6864AA0B4a7E6a0) |
-| SapphireCreditScore | [https://etherscan.io/address/0x427d3B028fb15a06C2d75be8E8a2238aAd41ed3A](https://etherscan.io/address/0x427d3B028fb15a06C2d75be8E8a2238aAd41ed3A) |
+| Name                             | Address                                                                                                               |   |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------- | - |
+| DeFiPassport                     | [0x933492b6B7038A7e4f14b64DEFe40463F9bc3508](https://etherscan.io/address/0x933492b6B7038A7e4f14b64DEFe40463F9bc3508) |   |
+| SapphirePassportScores           | [0x548ab653a6ab2e54debf05f3a728b602ac1c2e69](https://etherscan.io/address/0x548ab653a6ab2e54debf05f3a728b602ac1c2e69) |   |
+| WaitlistBatch                    | [0xEF8f8e370722Ae405449Cb4cC6864AA0B4a7E6a0](https://etherscan.io/address/0xEF8f8e370722Ae405449Cb4cC6864AA0B4a7E6a0) |   |
+| SapphireCreditScore (deprecated) | [0x427d3B028fb15a06C2d75be8E8a2238aAd41ed3A](https://etherscan.io/address/0x427d3B028fb15a06C2d75be8E8a2238aAd41ed3A) |   |
 
 ## STABLEx
 
