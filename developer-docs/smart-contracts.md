@@ -60,57 +60,53 @@ Result:
 }
 ```
 
-Then use the resulting tuple within your Solidity code (`v0.8.4` compatible).
+Then use the resulting tuple within your Solidity code (`^0.8.4` compatible). You can make the `ISapphirePassportScores` and `SapphireTypes` contracts available through the `npm` package `@arcxgame/contracts`.
 
 Example:
 
 ```
-pragma solidity ^0.8.4;
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.4;
 
-...
+import { ISapphirePassportScores } from "@arcxgame/contracts/contracts/sapphire/ISapphirePassportScores.sol";
+import { SapphireTypes } from "@arcxgame/contracts/contracts/sapphire/SapphireTypes.sol";
 
+contract ExampleContract {
 
-function init(address _passportScoresAddress) external onlyAdmin initializer {
-    ...
-    
-    require(
-        _passportScoresAddress.isContract(),
-        "DefiPassport: passport scores address is not a contract"
-    );
-    
-    passportScoresContract = ISapphirePassportScores(_passportScoresAddress);
-    
-    ...
+    ISapphirePassportScores public passportScores;
+
+    constructor(
+        address _passportScoresAddress
+    ) {
+        passportScores = _passportScoresAddress;
+    }
+
+    modifier checkScoreProof (
+        SapphireTypes.ScoreProof memory _scoreProof
+    ) {
+        // Optional: Enforce verification from the caller only
+        require(
+            msg.sender == _scoreProof.account,
+            "The proof must correspond to sender"
+        );
+        
+        passportScores.verify(_scoreProof); // <--- How to verify score
+        _;
+    }
+
+    // Will revert if proof is invalid
+    function doSomethingThatNeedsValidScore(
+        SapphireTypes.ScoreProof _scoreProof
+    ) 
+        external
+        checkScoreProof(_scoreProof)
+    {
+        // Some code to be executed if the score proof is valid
+        if (_scoreProof.score > 50) {
+            // Do something
+        }
+    }
 }
-
-modifier checkScoreProof(
-    SapphireTypes.ScoreProof memory _scoreProof
-) {
-    // Optional: Enforce verification from the caller only
-    require(
-        _to == _scoreProof.account,
-        "The proof must correspond to the receiver"
-    );
-    
-    passportScoresContract.verify(_scoreProof); // <--- How to verify score
-    _;
-}
-
-...
-
-// Will fail if proof is invalid
-function doSomethingThatNeedsAValidScore(
-    SapphireTypes.ScoreProof _scoreProof
-) checkScoreProof(_scoreProof) {
-    // Some code to be executed if the score proof is valid
-}
-
-// Will fail if proof is invalid, allows transaction preview to show revert
-function verifyScore(SapphireTypes.ScoreProof calldata _scoreProof) external view returns(bool) {
-    return passportScoresContract.verify(_scoreProof); 
-}
-
-
 ```
 
 You can find all types in our contracts [npm package](https://www.npmjs.com/package/@arcxgame/contracts).
