@@ -55,13 +55,14 @@ The only required parameter is `account`, all other properties are optional. Def
     chainId = '1',
     arcxUrl = 'https://api.arcx.money', 
     closable = true,
+    showSpinner = false,
     analytics = true,
 />
 ```
 
 #### Passport Properties
 
-<table><thead><tr><th>Property</th><th data-type="select">Type</th><th>Description</th><th data-type="checkbox" data-hidden>Required?</th></tr></thead><tbody><tr><td><strong>account</strong></td><td></td><td>The associated address with a DeFi Passport. If an address does not have a DeFi Passport, the component will not display anything.</td><td>true</td></tr><tr><td><strong>width</strong></td><td></td><td>The width of the component.</td><td>false</td></tr><tr><td><strong>height</strong></td><td></td><td>The heigh of the component.</td><td>false</td></tr><tr><td><strong>position</strong></td><td></td><td><p>Behaviour of position:</p><ul><li><code>fixed</code> : Have the passport float in the lower right corner of the screen</li><li><code>flex</code> : Display the passport where the component is placed.</li></ul></td><td>false</td></tr><tr><td><strong>chainId</strong></td><td></td><td>Chain identifier of connected network.</td><td>false</td></tr><tr><td><strong>arcxUrl</strong></td><td></td><td>Endpoint to fetch passport metadata.</td><td>false</td></tr><tr><td><strong>closeable</strong></td><td></td><td>Allow the component to be dismissed.</td><td>false</td></tr><tr><td><strong>analytics</strong></td><td></td><td>Participate in providing metrics to the ARCx engineering team. </td><td>false</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th data-type="select">Type</th><th>Description</th><th data-type="checkbox" data-hidden>Required?</th></tr></thead><tbody><tr><td><strong>account</strong></td><td></td><td>The associated address with a DeFi Passport. If an address does not have a DeFi Passport, the component will not display anything.</td><td>true</td></tr><tr><td><strong>width</strong></td><td></td><td>The width of the component.</td><td>false</td></tr><tr><td><strong>height</strong></td><td></td><td>The heigh of the component.</td><td>false</td></tr><tr><td><strong>position</strong></td><td></td><td><p>Behaviour of position:</p><ul><li><code>fixed</code> : Have the passport float in the lower right corner of the screen</li><li><code>flex</code> : Display the passport where the component is placed.</li></ul></td><td>false</td></tr><tr><td><strong>chainId</strong></td><td></td><td>Chain identifier of connected network.</td><td>false</td></tr><tr><td><strong>arcxUrl</strong></td><td></td><td>Endpoint to fetch passport metadata.</td><td>false</td></tr><tr><td><strong>closeable</strong></td><td></td><td>Allow the component to be dismissed.</td><td>false</td></tr><tr><td><strong>showSpinner</strong></td><td></td><td>Shows a loading animation (spinner) while the passport loads.</td><td>false</td></tr><tr><td><strong>analytics</strong></td><td></td><td>Participate in providing metrics to the ARCx engineering team. </td><td>false</td></tr></tbody></table>
 
 ### How it works
 
