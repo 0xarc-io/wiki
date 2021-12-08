@@ -8,9 +8,9 @@ description: A brief guide on using the ARCx API
 
 The ARCx team provides a variety of endpoints to 3rd-party developers to facilitate the acquisition of data related to ARCx products. Most of the information returned by our endpoints can also be parsed from on-chain logs. There are three main categories to our endpoints:
 
-* [Reputation](verifying-passports.md#reputation) : The ARCx infrastructure creates on-chain reputation data for a variety of addresses. Such data is used by 3rd party developers and the ARCx Passport (see below) to make data-driven decisions on-chain. Here you can fetch the list of indexed addresses, view a  reputation profile and fetch a proof of a particular score within a profile for [on-chain verification.](smart-contracts.md)&#x20;
-* [Passports](verifying-passports.md#passports) : The ARCx Passport is they key to the ARCx ecosystem. It enables staking, borrowing and skin features. This NFT is a visual representation of your blockchain identity, but does not provide any benefit outside the ARCx ecosystem.
-* [Protocols](verifying-passports.md#protocols) : ARCx has a variety of scores and partnerships with other dApps. These endpoints allow for transparency is who is integrated with ARCx and which scores are currently being indexed.&#x20;
+* [Score](verifying-passports.md#score) : The ARCx infrastructure creates on-chain profiles for a variety of addresses. Such data is used by 3rd party developers and the ARCx Passport (see below) to make data-driven decisions on-chain. Here you can view an account's profile and fetch a proof of a particular score within a profile for [on-chain verification.](smart-contracts.md)&#x20;
+* [Passports](verifying-passports.md#passports) : The ARCx Passport is the key to the ARCx ecosystem. It enables staking, borrowing and skin features. This NFT is a visual representation of your blockchain identity, but does not provide any benefit outside the ARCx ecosystem.
+* [Protocols](verifying-passports.md#protocols) : ARCx has a variety of scores and partnerships with other dApps. These endpoints allow for transparency on who is integrated with ARCx and which scores are currently being indexed.&#x20;
 
 CURRENT API VERSION: `v1.0`
 
@@ -18,43 +18,18 @@ CURRENT API VERSION: `v1.0`
 https://api.arcx.money
 ```
 
-## Reputation
+## Score
 
+### GET /scores/:address
 
-
-### GET /reputation
-
-Get the list of all addresses currently being indexed by the ARCx protocol.
-
-Example:
-
-```
-https://api.arcx.money/reputation
-```
-
-Response:
-
-```
-[
-    "0xE4F...90B",
-    "0x9c7...89b",
-    "0xcd7...A1E",
-    ...
-]
-```
-
-### GET /reputation/:address
-
-Get the entire reputation profile of a specific address. This will be an array of objects outlining all the potential score this address could obtain.
-
-
+Get the entire profile of a specific address. This will be an array of objects outlining all the potential score this address could obtain.
 
 To verify each score on the blockchain, simply drop the `metadata` attribute and use the remainder 4 attributes (`account`, `protocol`, `score` and `merkleProof`) to [verify the score on the blockchain](smart-contracts.md).
 
 Example:
 
 ```
-https://api.arcx.money/reputation/0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E
+https://api.arcx.money/scores/0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E
 ```
 
 Response:
@@ -74,6 +49,7 @@ Response:
             "0x505a53ea980962e958e9cadd79a8d26bb3431de6d1d3dd84ed816be6f3d38d47"
         ],
         "metadata": {
+            "active": true,
             "name": "arcx.loyalty",
             "maxValue": "450",
             "minValue": "50",
@@ -106,18 +82,16 @@ Response:
 ]
 ```
 
-####
+### GET /scores/:address/:score - (Merkle Proof)
 
-### GET /reputation/:address/:score - (Merkle Proof)
+A more precise option from the previous `/scores/:address` endpoint. Most commonly used by 3rd party developers to verify their respective user's scores on the blockchain.
 
-A more precise option from the previous `/reputation/:address` endpoint. Most commonly used by 3rd party developers to verify their respective user's scores.
-
-This is the **exact** format needed to [verify scores on the blockchain](smart-contracts.md). Scores are verified using Merkle Trees, more information regarding this topic can be found [here](https://en.wikipedia.org/wiki/Merkle\_tree).
+This is the **exact** format needed to [verify scores within Smart Contracts ](smart-contracts.md). Scores are verified using Merkle Trees, more information regarding this topic can be found [here](https://en.wikipedia.org/wiki/Merkle\_tree).
 
 Example:
 
 ```
-https://api.arcx.money/reputation/0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E/arcx.loyaltyty
+https://api.arcx.money/scores/0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E/arcx.loyaltyty
 ```
 
 Response:
@@ -150,9 +124,7 @@ Each Passport has accessible metadata, including one of the following statuses:
 
 * `active`: This address has an active ARCx Passport and already can use its benefits.
 * `unclaimed`: This address has yet to claim it's Passport, but it can do so at any time.
-* `waitlist` : This address will be able to claim its Passport soon.
 * `untracked` : This address is not indexed by ARCx in any way.
-* `burnt` : This address is blacklisted from ever having a Passport.
 
 Example:
 
@@ -179,41 +151,24 @@ Response:
 }
 ```
 
-### GET /passports/eligible/:address
+### GET /passports
 
-To receive an ARCx Passport, an address is required to meet certain on-chain criteria. These are defined below, and may change over time. However, even if eligibility requirements change, once an address claims its Passport, it cannot be revoked.
+List all the addresses who have claimed their ARCx Passport
 
 Example:
 
 ```
-https://api.arcx.money/passports/eligible/0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E
+https://api.arcx.money/passports
 ```
 
 Response:
 
 ```
 [
-    {
-        "passed": true,
-        "title": "Address History",
-        "description": "Total amount of days since first transaction.",
-        "required": 30,
-        "current": 130
-    },
-    {
-        "passed": true,
-        "title": "Gas Spent (ETH)",
-        "description": "Total amount of gas spent (in ETH) since beginning of time.",
-        "required": 0.01,
-        "current": 0.32
-    },
-    {
-        "passed": true,
-        "title": "Unique Interactions",
-        "description": "Total unique interactions between all other addresses since beginning of time.",
-        "required": 5,
-        "current": 10
-    }
+    "0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E",
+    "0xa8c...20c",
+    "0xc23...1a2",
+    ...
 ]
 ```
 
