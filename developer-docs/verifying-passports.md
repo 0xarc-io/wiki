@@ -8,8 +8,8 @@ description: A brief guide on using the ARCx API
 
 The ARCx team provides a variety of endpoints to 3rd-party developers to facilitate the acquisition of data related to ARCx products. Most of the information returned by our endpoints can also be parsed from on-chain logs. There are three main categories to our endpoints:
 
-* [Score](verifying-passports.md#score) : The ARCx infrastructure creates on-chain profiles for a variety of addresses. Such data is used by 3rd party developers and the ARCx Passport (see below) to make data-driven decisions on-chain. Here you can view an account's profile and fetch a proof of a particular score within a profile for [on-chain verification.](smart-contracts.md)&#x20;
-* [Passports](verifying-passports.md#passports) : The ARCx Passport is the key to the ARCx ecosystem. It enables staking, borrowing and skin features. This NFT is a visual representation of your blockchain identity, but does not provide any benefit outside the ARCx ecosystem.
+* [Scores](verifying-passports.md#score) : The ARCx infrastructure creates on-chain scores for a variety of addresses. This data is used by 3rd party developers to make data-driven decisions on-chain. You'll find an account's profile and fetch proofs of particular scores using these endpoints.[.](smart-contracts.md)&#x20;
+* [Passports](verifying-passports.md#passports) : The ARCx Passport is the key to the ARCx ecosystem. It enables staking, borrowing and skin features. This is a visual representation of your blockchain identity, but does not provide any benefit outside the ARCx ecosystem.
 * [Protocols](verifying-passports.md#protocols) : ARCx has a variety of scores and partnerships with other dApps. These endpoints allow for transparency on who is integrated with ARCx and which scores are currently being indexed.&#x20;
 
 CURRENT API VERSION: `v1.0`
@@ -18,13 +18,13 @@ CURRENT API VERSION: `v1.0`
 https://api.arcx.money
 ```
 
-## Score
+## Scores
 
 ### GET /scores/:address
 
-Get the entire profile of a specific address. This will be an array of objects outlining all the potential score this address could obtain.
+Get the entire profile of a specific address. This will be an array of objects outlining all the potential scores this address could obtain.
 
-To verify each score on the blockchain, simply drop the `metadata` attribute and use the remainder 4 attributes (`account`, `protocol`, `score` and `merkleProof`) to [verify the score on the blockchain](smart-contracts.md).
+To verify each score on the blockchain, simply drop the `metadata` attribute and use the remainder 4 attributes (`account`, `protocol`, `score` and `merkleProof`) to [verify the score on the blockchain](smart-contracts.md). This has the same result as using the upcoming endpoint.
 
 Example:
 
@@ -116,15 +116,15 @@ Response:
 
 ## Passports
 
-The ARCx Passport is an ERC721 that is non-transferable and unique to each address.
+The ARCx Passport is a visual representation of your on-chain reputation. Claiming your passport (now free!) unlocks all your scores and unlocks the interactions with the ARCx protocol.
 
 ### GET /passports/:address
 
 Each Passport has accessible metadata, including one of the following statuses:
 
-* `active`: This address has an active ARCx Passport and already can use its benefits.
-* `unclaimed`: This address has yet to claim it's Passport, but it can do so at any time.
-* `untracked` : This address is not indexed by ARCx in any way.
+* `active`: This address has an active ARCx Passport and is already using its benefits.
+* `unclaimed`: This address has yet to claim a Passport and already has scores indexed.
+* `untracked` : This address has yet to claim a Passport and will receive its first score thereafter.
 
 Example:
 
