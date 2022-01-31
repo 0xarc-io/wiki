@@ -2,7 +2,7 @@
 description: Display the ARCx DeFi Passport in your dApp.
 ---
 
-# Passport.js
+# 🎨 Passport.js
 
 ### Introduction
 

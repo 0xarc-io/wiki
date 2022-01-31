@@ -1,6 +1,6 @@
-# Contract Addresses
+# 📜 Addresses
 
-## Global Contracts
+### Global Contracts
 
 | Contract Name                    | Address                                                                                                                                                 |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -18,7 +18,7 @@
 | STABLEx-3CRV-f-2                 | [https://etherscan.io/address/0x3252efd4ea2d6c78091a1f43982ee2c3659cc3d1](https://etherscan.io/address/0x3252efd4ea2d6c78091a1f43982ee2c3659cc3d1)      |
 | TokenClaim                       | [https://etherscan.io/address/0x562423f830582B6F704E175c439E132e59058284](https://etherscan.io/address/0x562423f830582B6F704E175c439E132e59058284)      |
 
-## ARCx Passport
+### ARCx Passport
 
 | Name                             | Address                                                                                                               |   |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- | - |
@@ -27,7 +27,7 @@
 | WaitlistBatch                    | [0xEF8f8e370722Ae405449Cb4cC6864AA0B4a7E6a0](https://etherscan.io/address/0xEF8f8e370722Ae405449Cb4cC6864AA0B4a7E6a0) |   |
 | SapphireCreditScore (deprecated) | [0x427d3B028fb15a06C2d75be8E8a2238aAd41ed3A](https://etherscan.io/address/0x427d3B028fb15a06C2d75be8E8a2238aAd41ed3A) |   |
 
-## STABLEx
+### STABLEx
 
 | Name                     | Address                                                                                                                                            |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,11 +38,10 @@
 | ibETH-STABLEx-CoreProxy  | [https://etherscan.io/address/0x81f16E6B58738DaAA4C5D493a240cCA49C240f04](https://etherscan.io/address/0x81f16E6B58738DaAA4C5D493a240cCA49C240f04) |
 | imUSD-STABLEx-CoreProxy  | [https://etherscan.io/address/0x066b7660b2003793fB2ffD0b8152158c016fbfeF](https://etherscan.io/address/0x066b7660b2003793fB2ffD0b8152158c016fbfeF) |
 | wstETH-STABLEx-CoreProxy | [https://etherscan.io/address/0xC466Ec062D554BEB42f1766488F7345261C63616](https://etherscan.io/address/0xC466Ec062D554BEB42f1766488F7345261C63616) |
-|                          |                                                                                                                                                    |
 
-## Farms
+### Farms
 
-| Farm Number | Address                                                                                                                                            |
+| Farm number | Address                                                                                                                                            |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1           | [https://etherscan.io/address/0xd1902581868163BEf61776cfD27228EE5074be8F](https://etherscan.io/address/0xd1902581868163BEf61776cfD27228EE5074be8F) |
 | 2           | [https://etherscan.io/address/0xA9A9300Ab9A70c43C19d6F42e3308Be24d73D885](https://etherscan.io/address/0xA9A9300Ab9A70c43C19d6F42e3308Be24d73D885) |
@@ -55,4 +54,30 @@
 | 7           | [https://etherscan.io/address/0x8F1155447Ee97b5Ae147a01a5c420B0FDDF0370D](https://etherscan.io/address/0x8F1155447Ee97b5Ae147a01a5c420B0FDDF0370D) |
 | 8           | [https://etherscan.io/address/0x3043b623632fF1AC88B3a17113E39c0B964381C5](https://etherscan.io/address/0x3043b623632fF1AC88B3a17113E39c0B964381C5) |
 | 9           | [https://etherscan.io/address/0xAb0BcA3ff56d891cC8b22A5d9705F7088cE3Bf3b](https://etherscan.io/address/0xAb0BcA3ff56d891cC8b22A5d9705F7088cE3Bf3b) |
+|             |                                                                                                                                                    |
 
+### Archived addresses
+
+_**LINKUSD**_
+
+| Contract Name   | Address                                                                                                                                            |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Core Proxy      | [https://etherscan.io/address/0x5568Df89AF6Bc835B876fDc3B2d44ef63530e419](https://etherscan.io/address/0x5568Df89AF6Bc835B876fDc3B2d44ef63530e419) |
+| Oracle          | [https://etherscan.io/address/0xeffd9768a337950cdc883682dc08583d4a3fe596](https://etherscan.io/address/0xeffd9768a337950cdc883682dc08583d4a3fe596) |
+| Synthetic Token | [https://etherscan.io/address/0x0E2EC54fC0B509F445631Bf4b91AB8168230C752](https://etherscan.io/address/0x0E2EC54fC0B509F445631Bf4b91AB8168230C752) |
+| State           | [https://etherscan.io/address/0x94F40fD4018586AaFb8A6AD95441e0b58cc4c058](https://etherscan.io/address/0x94F40fD4018586AaFb8A6AD95441e0b58cc4c058) |
+
+_**Liquidity Pool Tokens**_
+
+| LP Name                  | Address                                                                                                                                            |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Balance Pool Token (BPT) | [https://etherscan.io/address/0x5dcb5baa17a5af85aaec5d2b422cab13c0141bce](https://etherscan.io/address/0x5dcb5baa17a5af85aaec5d2b422cab13c0141bce) |
+| LINKUSD3Crv              | [https://etherscan.io/address/0x6D65b498cb23deAba52db31c93Da9BFFb340FB8F](https://etherscan.io/address/0x6D65b498cb23deAba52db31c93Da9BFFb340FB8F) |
+
+#### KYF Contracts
+
+| Contract Name | Address                                                                                                                                            |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| KYF v1        | [https://etherscan.io/address/0x1f10ff148a0ad63a57f98530ab472568e90a72c5](https://etherscan.io/address/0x1f10ff148a0ad63a57f98530ab472568e90a72c5) |
+| KYF v2        | [https://etherscan.io/address/0x877e31c9c04e8a2a3af59341635f5bc6ae0ddc13](https://etherscan.io/address/0x877e31c9c04e8a2a3af59341635f5bc6ae0ddc13) |
+| KYF Token     | [https://etherscan.io/address/0xD85e2772912213e0c584d80B2694c79D6a09E39A](https://etherscan.io/address/0xD85e2772912213e0c584d80B2694c79D6a09E39A) |

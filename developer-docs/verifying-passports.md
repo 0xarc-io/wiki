@@ -2,7 +2,7 @@
 description: A brief guide on using the ARCx API
 ---
 
-# API
+# 🧠 API
 
 ## Introduction
 

@@ -1,30 +1,29 @@
 # Table of contents
 
-* [Welcome to ARCx](README.md)
-* [DeFi Passport](how-to-apply-for-a-defi-passport/README.md)
-  * [What is a Credit Score?](how-to-apply-for-a-defi-passport/what-is-a-credit-score.md)
-  * [How the Credit Score is Used](how-to-apply-for-a-defi-passport/how-the-credit-score-is-used.md)
-  * [Passport Skins](how-to-apply-for-a-defi-passport/passport-skins.md)
-* [Essential Resources](official-links/README.md)
-  * [Written articles](official-links/written-articles.md)
+## Introducing ARCx
 
-## Token and Governance
+* [👋 Welcome to ARCx](README.md)
+* [❓ FAQs](introducing-arcx/faqs.md)
 
-* [ARCx Governance Token (ARCX)](token-and-governance/arcx-governance-token-arcx/README.md)
-  * [Tokenomics](token-and-governance/arcx-governance-token-arcx/tokenomics.md)
-  * [ARCX Token Split and Migration](token-and-governance/arcx-governance-token-arcx/arcx-token-split-and-migration.md)
-  * [ARCx Token (Technical)](token-and-governance/arcx-governance-token-arcx/arcx-tokenomics.md)
-* [Proposals and Voting](token-and-governance/proposals-and-voting.md)
+## Product
+
+* [💯 Scores](product/scores.md)
+* [🛂 Passport](product/how-to-apply-for-a-defi-passport.md)
+* [⚙ Integrations](product/integrations.md)
+
+## Token
+
+* [🪙 ARCx Token (ARCX)](token/arcx-token.md)
+* [🗳 Governance](token/proposals-and-voting.md)
+
+## Developers <a href="#developer-docs" id="developer-docs"></a>
+
+* [🧠 API](developer-docs/verifying-passports.md)
+* [🎨 Passport.js](developer-docs/passportjs.md)
+* [🤖 Smart Contracts](developer-docs/smart-contracts.md)
 
 ## Misc
 
-* [Direct Contract Interaction](misc/direct-contract-interaction.md)
-* [Contract Addresses](misc/addresses/README.md)
-  * [Archive](misc/addresses/archive.md)
-* [Disclaimer for lost tokens](misc/disclaimer-for-lost-tokens.md)
-
-## Developers <a href="developer-docs" id="developer-docs"></a>
-
-* [API](developer-docs/verifying-passports.md)
-* [Passport.js](developer-docs/passportjs.md)
-* [Smart Contracts](developer-docs/smart-contracts.md)
+* [🔗 Official Links](misc/official-links.md)
+* [📜 Addresses](misc/addresses.md)
+* [📖 Articles](misc/written-articles.md)

@@ -2,7 +2,7 @@
 description: How ARCx products work on the blockchain
 ---
 
-# Smart Contracts
+# 🤖 Smart Contracts
 
 ### Introduction
 
@@ -11,7 +11,7 @@ The ARCx infrastructure is built on [Merkle trees](https://www.investopedia.com/
 * **Epoch**: We update our Merkle tree every epoch (i.e. a set period of time, 24h, 1 week, etc). You can view the current epoch duration directly from the [PassportScores contract](https://etherscan.io/address/0x548ab653a6ab2e54debf05f3a728b602ac1c2e69).
 * ****[**Merkle root**](https://www.investopedia.com/terms/m/merkle-root-cryptocurrency.asp)**:** Is the combined hash of all the elements in the tree. Each epoch progressively has different Merkle roots as new scores and addresses are indexed. You can verify a score's validity on-chain by providing a Merkle proof to the PassportScores contract.&#x20;
 * **Merkle proof**: An array of hashes that can be combined with Merkle leaf to verify if this leaf is in the Merkle tree. The Merkle proof is the path from Merkle root to the Merkle leaf. If you hash the Merkle leaf with its corresponding Merkle proof and obtain the same root and the one saved on-chain, then this leaf is cryptographically verified.
-* **Merkle leaf: **An object that is hashed and saved on the blockchain. In the context of the ARCx ecosystem, each Merkle leaf has the following format:
+* **Merkle leaf:** An object that is hashed and saved on the blockchain. In the context of the ARCx ecosystem, each Merkle leaf has the following format:
 
 ```
 {
