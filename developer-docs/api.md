@@ -1,5 +1,5 @@
 ---
-description: A brief guide on using the ARCx API
+description: A brief guide on how to use our endpoints.
 ---
 
 # 🧠 API
@@ -25,7 +25,7 @@ First, you'll need to fetch a specific score of a specific user. Let's say the s
 https://api.arcx.money/scores/0x123...456/arcx.loyalty
 ```
 
-This will return your score containing a Merkle proof. We'll refer to this object as the **Score Proof.** [Here's an example](verifying-passports.md#get-scores-address-score-score-proof) of what that looks like.&#x20;
+This will return your score containing a Merkle proof. We'll refer to this object as the **Score Proof.** [Here's an example](api.md#get-scores-address-score-score-proof) of what that looks like.&#x20;
 
 #### 2. Send your Score Proof to a smart contract
 

@@ -8,7 +8,7 @@ description: Using ARCx scores to make data-driven decisions on-chain.
 
 The ARCx infrastructure is built on [Merkle trees](https://www.investopedia.com/terms/m/merkle-tree.asp) to maintain proper security and scalability standards. For those who are new to Merkle trees/Hash trees, here's a refresher on a few important terms:
 
-* **Merkle leaf:** The leaf of a Merkle Tree. Leaves are hashed together to create a Markle tree. In our context, each leaf represents a score and has the following format:
+* **Merkle leaf:** The leaf of a Merkle Tree. Leaves are hashed together to create a Merkle tree. In our context, each leaf represents a score and has the following format:
 
 ```
 {
@@ -29,7 +29,7 @@ The ARCx infrastructure is built on [Merkle trees](https://www.investopedia.com/
 
 ### Using a Score in a Smart Contract
 
-To verify a score, fetch the Score Proof you want from [our API](verifying-passports.md#get-scores-address-score-score-proof)\*.
+To verify a score, fetch the Score Proof you want from [our API](api.md#get-scores-address-score-score-proof)\*.
 
 _\*Drop the `metadata` attribute if its included\*_
 

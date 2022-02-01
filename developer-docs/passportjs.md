@@ -68,7 +68,7 @@ The only required parameter is `account`, all other properties are optional. Def
 
 If an address has no Passport, nothing is displayed.
 
-This package fetches an address' information from our [API](verifying-passports.md#get-passports) and uses WebGL + CSS to wrap everything into a nice `React.js` component. It's a light-weight package to help with the integration of the Passport into any dApp which wants to display their integration with us.
+This package fetches an address' information from our [API](api.md#passports-endpoints) and uses WebGL + CSS to wrap everything into a nice `React.js` component. It's a light-weight package to help with the integration of the Passport into any dApp which wants to display their integration with us.
 
 
 
