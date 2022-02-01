@@ -168,7 +168,7 @@ Response:
 
 
 
-### Help
+## Help
 
 If you have any questions or suggestions, we'd love your input in our [Discord](https://discord.com/invite/skwz6je).\
 \
