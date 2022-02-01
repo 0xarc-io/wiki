@@ -4,32 +4,57 @@ description: A brief guide on using the ARCx API
 
 # 🧠 API
 
-## Introduction
+## Getting started
 
-The ARCx team provides a variety of endpoints to 3rd-party developers to facilitate the acquisition of data related to ARCx products. Most of the information returned by our endpoints can also be parsed from on-chain logs. There are three main categories to our endpoints:
+Integrating scores into your own dApp requires no sign-ups nor registrations. We provide open APIs to encourage the use of scores (i.e. address reputation) across the DeFi ecosystem.
 
-* [Scores](verifying-passports.md#score) : The ARCx infrastructure creates on-chain scores for a variety of addresses. This data is used by 3rd party developers to make data-driven decisions on-chain. You'll find an account's profile and fetch proofs of particular scores using these endpoints.[.](smart-contracts.md)&#x20;
-* [Passports](verifying-passports.md#passports) : The ARCx Passport is the key to the ARCx ecosystem. It enables staking, borrowing and skin features. This is a visual representation of your blockchain identity, but does not provide any benefit outside the ARCx ecosystem.
-* [Protocols](verifying-passports.md#protocols) : ARCx has a variety of scores and partnerships with other dApps. These endpoints allow for transparency on who is integrated with ARCx and which scores are currently being indexed.&#x20;
 
-CURRENT API VERSION: `v1.0`
+
+If you'd like to create and integrate your own score, we'd love to help you with that ! \
+[Contact us on discord](https://discord.com/invite/skwz6je)
+
+
+
+Here's the step-by-step for developers to integrate scores into their smart contracts:
+
+#### 1. Get your Score Proof
+
+First, you'll need to fetch a specific score of a specific user. Let's say the score you want to fetch is `arcx.loyalty` and the wallet address is `0x123...456`. You would then simply make the following API call using the language/framework of your choosing:
 
 ```
-https://api.arcx.money
+https://api.arcx.money/scores/0x123...456/arcx.loyalty
 ```
 
-## Scores
+This will return your score containing a Merkle proof. We'll refer to this object as the **Score Proof.** [Here's an example](verifying-passports.md#get-scores-address-score-score-proof) of what that looks like.&#x20;
+
+#### 2. Send your Score Proof to a smart contract
+
+With your Score Proof, you now have everything you need and can call a smart contract. Simply include this proof into a your on-chain call to verify it in solidity/smart contracts. If there is a `metadata` field in your Score Proof, simply drop it (it is not needed on-chain).
+
+#### 3. Verify your Score Proof
+
+Once the proof is in smart-contract code, simply [verify it using our contracts](smart-contracts.md#verifying-a-score) to ensure its integrity. Once verified, you can add your own rules and logic.
+
+#### 4. Custom Score logic
+
+Now that your score is verified, the fun begins! You can write any smart-contract logic based on the value of the score. Here's [some examples](../introducing-arcx/faqs.md#what-problem-is-arcx-solving) of what problems can now be solved.
+
+
+
+For further questions, explanations or examples, come chat with us on [discord](https://discord.com/invite/skwz6je).
+
+## Scores endpoints
 
 ### GET /scores/:address
 
-Get the entire profile of a specific address. This will be an array of objects outlining all the potential scores this address could obtain.
+Get all the scores of a specific address. This will include all the scores in our system for this address, even those that the address does not yet have.
 
-To verify each score on the blockchain, simply drop the `metadata` attribute and use the remainder 4 attributes (`account`, `protocol`, `score` and `merkleProof`) to [verify the score on the blockchain](smart-contracts.md). This has the same result as using the upcoming endpoint.
+When an address does not have a score, its `score` will be `null`.
 
 Example:
 
 ```
-https://api.arcx.money/scores/0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E
+https://api.arcx.money/scores/0x123...456
 ```
 
 Response:
@@ -37,44 +62,38 @@ Response:
 ```
 [
     {
-        "account": "0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E",
-        "protocol": "0x617263782e6c6f79616c74790000000000000000000000000000000000000000",
-        "score": "175",
+        "account": "0x123...456",
+        "protocol": "0x611...000",
+        "score": "100",
         "merkleProof": [
-            "0xedb1ef66264d930648d442114717dec9b83dbdf7cfee95d39822a7b0bb262ffc",
-            "0xc21773776d32c50291589cfda4c1ff545ba30376974eb7388633cd420456341e",
-            "0xc803198ff567cb0359896bbf26d7b5daafc74e00a2314acd3938e85b10a490d6",
-            "0x8294acc477326db80c02ad7c50c40f56580ef3933a5155b5929c7297176b0b94",
-            "0xffe33ed76230c01bce31bfcee95bf010c3c926fcb52350479b95a4a54f5005c6",
-            "0x505a53ea980962e958e9cadd79a8d26bb3431de6d1d3dd84ed816be6f3d38d47"
+            "0x111...111",
+            "0x222...222",
+            "0x333...333",
+            ...,
         ],
         "metadata": {
-            "active": true,
-            "name": "arcx.loyalty",
-            "maxValue": "450",
-            "minValue": "50",
-            "description": "This score is calculation based on your interactions (positive or negative) with the ARCx protocol.",
-            "title": "ARCx Loyalty Score",
-            "externalURI": "",
-            "sources": ["ethereum"],
-            "explanations": [
-                {
-                    "value": "+50",
-                    "key": "Participated in an ARCx Farm"
-                },
-                ...
-            ],
-            "suggestions": {
-                "account": [
-                    "Stake your ARCx tokens.",
-                    ...
-                ],
-                "global": [
-                    "Stay active within the Discord community",
-                    ...
-                ]
-            },
-        }
+            ...
+        },
+    },
+    {
+        "account": "0x123...456",
+        "protocol": "0x622...000",
+        "score": "500",
+        "merkleProof": [
+            "0xaaa...aaa",
+            "0xbbb...bbb",
+            "0xccc...ccc",
+            ...,
+        ],
+        "metadata": {
+            ...
+        },
+    },
+    {
+        "account": "0x123...456",
+        "protocol": "0x633...000",
+        "score": null,
+        "merkleProof": [],
     },
     {
         ...
@@ -82,78 +101,40 @@ Response:
 ]
 ```
 
-### GET /scores/:address/:score - (Merkle Proof)
+### GET /scores/:address/:score - (Score Proof)
 
-A more precise option from the previous `/scores/:address` endpoint. Most commonly used by 3rd party developers to verify their respective user's scores on the blockchain.
-
-This is the **exact** format needed to [verify scores within Smart Contracts ](smart-contracts.md). Scores are verified using Merkle Trees, more information regarding this topic can be found [here](https://en.wikipedia.org/wiki/Merkle\_tree).
+A more precise option from the previous `/scores/:address` endpoint. Most effective method of obtaining the required Score Proof for[ on-chain use.](smart-contracts.md#verifying-a-score)
 
 Example:
 
 ```
-https://api.arcx.money/scores/0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E/arcx.loyaltyty
+https://api.arcx.money/scores/0x123...456/arcx.loyalty
 ```
 
 Response:
 
 ```
-{
-    "account": "0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E",
+ {
+    "account": "0x123...456",
+    "protocol": "0x611...000",
     "score": "175",
-    "protocol": "0x617263782e6c6f79616c74790000000000000000000000000000000000000000",
     "merkleProof": [
-        "0xedb1ef66264d930648d442114717dec9b83dbdf7cfee95d39822a7b0bb262ffc",
-        "0xc21773776d32c50291589cfda4c1ff545ba30376974eb7388633cd420456341e",
-        "0xc803198ff567cb0359896bbf26d7b5daafc74e00a2314acd3938e85b10a490d6",
-        "0x8294acc477326db80c02ad7c50c40f56580ef3933a5155b5929c7297176b0b94",
-        "0xffe33ed76230c01bce31bfcee95bf010c3c926fcb52350479b95a4a54f5005c6",
-        "0x505a53ea980962e958e9cadd79a8d26bb3431de6d1d3dd84ed816be6f3d38d47"
-    ]
+        "0x111...111",
+        "0x222...222",
+        "0x333...333",
+        ...,
+    ],
+    "metadata": {
+        ...
+    },
 }
 ```
 
-
-
-## Passports
-
-The ARCx Passport is a visual representation of your on-chain reputation. Claiming your passport (now free!) unlocks all your scores and unlocks the interactions with the ARCx protocol.
-
-### GET /passports/:address
-
-Each Passport has accessible metadata, including one of the following statuses:
-
-* `active`: This address has an active ARCx Passport and is already using its benefits.
-* `unclaimed`: This address has yet to claim a Passport and already has scores indexed.
-* `untracked` : This address has yet to claim a Passport and will receive its first score thereafter.
-
-Example:
-
-```
-https://api.arcx.money/passports/0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E
-```
-
-Response:
-
-```
-{
-    "address": "0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E",
-    "status": "active",
-    "dateIssued": 1629412046,
-    "tokenId": 3,
-    "activeSkin": {
-        "title": "ARCx Default White",
-        "description": "ARCx Default DeFi Passport Skins. Comes in black, purple and white.",
-        "tokenIds": ["3"],
-        "contract": "0x302434B8676048b9FDE0aD20952999C84c7f1428",
-        "group": "arcx",
-        "name": "white",
-    }
-}
-```
+## Passports endpoints
 
 ### GET /passports
 
-List all the addresses who have claimed their ARCx Passport
+List all the addresses who have claimed their Passport alongside the date they claimed.
 
 Example:
 
@@ -165,84 +146,31 @@ Response:
 
 ```
 [
-    "0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E",
-    "0xa8c...20c",
-    "0xc23...1a2",
+    {
+        "address": "0x111...111",
+        "date_claimed": 1641184343323
+    },
+    {
+        "address": "0x222...222",
+        "date_claimed": 1641136874287
+    },
+    {
+        "address": "0x333...333",
+        "date_claimed": 1641132310215
+    },
+    {
+        "address": "0x444...444",
+        "date_claimed": 1641137470422
+    },
     ...
 ]
-```
-
-## Protocols
-
-### GET /protocols
-
-List all the protocols which are currently integrated with the ARCx ecosystem
-
-Example:
-
-```
-https://api.arcx.money/protocols
-```
-
-Response:
-
-```
-[
-    "arcx",
-    "polygon",
-]  
-```
-
-### GET /protocols/:name
-
-List the metadata of a particular protocol which is integrated with the ARCx ecosystem.
-
-Example:
-
-```
-https://api.arcx.money/protocols/arcx
-```
-
-Response:
-
-```
-{
-    "registryURI": "https://prod.data.arcx.money/registry",
-    "scoresURI": "https://prod.data.arcx.money/scores",
-    "scoresMetadata": [
-        {
-            "name": "arcx.credit",
-            "description": "The ARCx quantification of credit worthiness create by analyzing blockchain transactions.",
-            "title": "ARCx Credit Score",
-            "sources": ["ethereum", "avax", "polygon"],
-            "maxValue": "1000",
-            "minValue": "0",
-            "externalURI": "https://wiki.arcx.money/",
-            "suggestions": [
-                "Always pay your debts on time",
-                "Ensure you have plenty of collatoral in the event of margin calls"
-            ]
-        },
-        {
-            "name": "arcx.loyalty",
-            "description": "This score is calculation based on your interactions (positive or negative) with the ARCx protocol.",
-            "title": "ARCx Loyalty Score",
-            "sources": ["ethereum"],
-            "suggestions": [
-                "Consider staking ARCx",
-                "Stay active within the Discord community",
-                "HODL the ARCx token",
-            ]
-        }
-    ]
-}
 ```
 
 
 
 ### Help
 
-If you have any questions or suggestions, we'd love your input on our [discord server](https://discord.com/invite/skwz6je).\
+If you have any questions or suggestions, we'd love your input in our [Discord](https://discord.com/invite/skwz6je).\
 \
 Happy building! ノ
 

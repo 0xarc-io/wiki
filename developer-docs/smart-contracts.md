@@ -1,115 +1,103 @@
 ---
-description: How ARCx products work on the blockchain
+description: Using ARCx scores to make data-driven decisions on-chain.
 ---
 
 # 🤖 Smart Contracts
 
 ### Introduction
 
-The ARCx infrastructure is built on [Merkle trees](https://www.investopedia.com/terms/m/merkle-tree.asp) to maintain good security and scalability standards. Therefore, there are two concepts that are important to grasp:
+The ARCx infrastructure is built on [Merkle trees](https://www.investopedia.com/terms/m/merkle-tree.asp) to maintain proper security and scalability standards. For those who are new to Merkle trees/Hash trees, here's a refresher on a few important terms:
 
-* **Epoch**: We update our Merkle tree every epoch (i.e. a set period of time, 24h, 1 week, etc). You can view the current epoch duration directly from the [PassportScores contract](https://etherscan.io/address/0x548ab653a6ab2e54debf05f3a728b602ac1c2e69).
-* ****[**Merkle root**](https://www.investopedia.com/terms/m/merkle-root-cryptocurrency.asp)**:** Is the combined hash of all the elements in the tree. Each epoch progressively has different Merkle roots as new scores and addresses are indexed. You can verify a score's validity on-chain by providing a Merkle proof to the PassportScores contract.&#x20;
-* **Merkle proof**: An array of hashes that can be combined with Merkle leaf to verify if this leaf is in the Merkle tree. The Merkle proof is the path from Merkle root to the Merkle leaf. If you hash the Merkle leaf with its corresponding Merkle proof and obtain the same root and the one saved on-chain, then this leaf is cryptographically verified.
-* **Merkle leaf:** An object that is hashed and saved on the blockchain. In the context of the ARCx ecosystem, each Merkle leaf has the following format:
+* **Merkle leaf:** The leaf of a Merkle Tree. Leaves are hashed together to create a Markle tree. In our context, each leaf represents a score and has the following format:
 
 ```
 {
-    "account": "0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E",
-    "protocol": "0x617263782e6c6f79616c74790000000000000000000000000000000000000000",
+    "account": "0x123...456",
+    "protocol": "0x617...000",
     "score": "175",
 }
 ```
 
-| Property   | Description                                                                                                                                                                                  |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `account`  | The address associated with this score. There can be many different scores for the same address, but each score-address combination will be unique.                                          |
-| `protocol` | The byte32 encoded representation of the protocol name. This is enforced for Smart Contract memory efficiency. The `protocol` in this example is the byte32 encoded value of `arcx.loyalty`. |
-| `score`    | The quantification of each score. This must be a positive value, but can be any number within the scope of a [BigNumber](https://docs.ethers.io/v5/api/utils/bignumber/).                    |
+| Property   | Description                                                                                                                                                                                   |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `account`  | The wallet address associated with this score.                                                                                                                                                |
+| `protocol` | The byte32 encoded representation of the score name. This format is enforced for memory efficiency. The `protocol` in simply the `byte32` encoded value of a score name, e.g. `arcx.loyalty`. |
+| `score`    | The quantification of this score. This must be a non-negative value within the scope of a [BigNumber](https://docs.ethers.io/v5/api/utils/bignumber/).                                        |
 
-### Verifying a Score&#x20;
+* **Merkle root:** Is the combined hash of all the elements in a Merkle tree. Our contracts continuously update their roots as new scores and addresses are added.&#x20;
+* **Merkle proof**: An array of hashes that when combined with a Merkle leaf, verifies the integrity  said leaf. If combining the leaf and proof corresponds to the root published on-chain, the leaf is considered legitimate and ready for on-chain use.
 
-To verify a score, simply get the score that you want to prove from the [API](verifying-passports.md#get-reputation-address-score-merkle-proof). Then you can pass the response directly\* to the contract to verify it.
+### Using a Score in a Smart Contract
 
-_\*Drop the `metadata` attribute if included_
+To verify a score, fetch the Score Proof you want from [our API](verifying-passports.md#get-scores-address-score-score-proof)\*.
 
-Example:
+_\*Drop the `metadata` attribute if its included\*_
 
-* Address: `0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E`&#x20;
-* Protocol: `arcx.loyalty`
-
-Get tuple [from API:](verifying-passports.md#get-reputation-address-score-merkle-proof)&#x20;
-
-```
-https://api.arcx.money/reputation/0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E/arcx.creditScore
-```
-
-Result:
+Example of a Score Proof:
 
 ```
 {
-    "account": "0xcd78358fb5fC823b9e789605B7b4fDc1dEf14A1E",
+    "account": "0x123...456",
     "score": "175",
-    "protocol": "0x617263782e6c6f79616c74790000000000000000000000000000000000000000",
+    "protocol": "0x617...000",
     "merkleProof": [
-        "0x6b9...5d3",
-        "0x221...f5e",
-        "0xe66...ff5",
+        "0x111...111",
+        "0x222...222",
+        "0x333...333",
         ...
     ]
 }
 ```
 
-Then use the resulting tuple within your Solidity code (`^0.8.4` compatible). You can make the `ISapphirePassportScores` and `SapphireTypes` contracts available through the `npm` package `@arcxgame/contracts`.
 
-Example:
+
+Pass your Score Proof to any smart contract to verify and use it on-chain. Here's an example on how to handle an `arcx.loyalty` score over `50`:
+
+_\*Developer tip: Feel free to import our_ [_npm package_](https://www.npmjs.com/package/@arcxgame/contracts) _to easily manage ABI's_
 
 ```
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.4;
+...
 
 import { ISapphirePassportScores } from "@arcxgame/contracts/contracts/sapphire/ISapphirePassportScores.sol";
 import { SapphireTypes } from "@arcxgame/contracts/contracts/sapphire/SapphireTypes.sol";
 
+...
+
 contract ExampleContract {
 
-    ISapphirePassportScores public passportScores;
+    ...
+    
+    // Address of ARCx SapphirePassportScores contract
+    ISapphirePassportScores public passportScores; 
 
-    constructor(
-        address _passportScoresAddress
-    ) {
+    // Score that is required, e.g. 'arcx.loyalty' encoded into bytes32 
+    bytes32 private magicProtocol = 0x617263782e6c6f79616c74790000000000000000000000000000000000000000
+    ...
+
+    constructor(address _passportScoresAddress) {
         passportScores = _passportScoresAddress;
     }
 
-    modifier checkScoreProof (
-        SapphireTypes.ScoreProof memory _scoreProof
-    ) {
-        // Optional: Enforce verification from the caller only
-        require(
-            msg.sender == _scoreProof.account,
-            "The proof must correspond to sender"
+    ...
+    
+    function doSomeMagic(SapphireTypes.ScoreProof _scoreProof){
+    
+        require (
+            _scoreProof.protocol == magicProtocol,
+            "This score is not an arcx.loyalty score!"
         );
+    
+        // Returns true if valid, reverts when invalid
+        passportScores.verify(_scoreProof); 
         
-        passportScores.verify(_scoreProof); // <--- How to verify score
-        _;
-    }
-
-    // Will revert if proof is invalid
-    function doSomethingThatNeedsValidScore(
-        SapphireTypes.ScoreProof _scoreProof
-    ) 
-        external
-        checkScoreProof(_scoreProof)
-    {
-        // Some code to be executed if the score proof is valid
         if (_scoreProof.score > 50) {
-            // Do something
+            // Do something magical knowing score is greater than 50!
         }
     }
+    
+    ...
 }
 ```
-
-You can find all types in our contracts [npm package](https://www.npmjs.com/package/@arcxgame/contracts).
 
 ### Help
 

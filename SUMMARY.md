@@ -19,8 +19,8 @@
 ## Developers <a href="#developer-docs" id="developer-docs"></a>
 
 * [🧠 API](developer-docs/verifying-passports.md)
-* [🎨 Passport.js](developer-docs/passportjs.md)
 * [🤖 Smart Contracts](developer-docs/smart-contracts.md)
+* [🎨 Passport.js](developer-docs/passportjs.md)
 
 ## Misc
 

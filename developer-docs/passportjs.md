@@ -1,14 +1,14 @@
 ---
-description: Display the ARCx DeFi Passport in your dApp.
+description: Display aI'd rather  ARCx Passports in any dApp.
 ---
 
 # 🎨 Passport.js
 
 ### Introduction
 
-`Passport.js`  is a small `React.js` component which displays a wallet's DeFi passport.&#x20;
+`Passport.js`  is a small `React.js` component which displays a wallet's DeFi passport and is registed in the [npm registry](https://www.npmjs.com/package/@arcxmoney/passport-js).
 
-![Live demo ](../.gitbook/assets/passportjs.gif)
+![](../.gitbook/assets/passportjs.gif)
 
 ### Install
 
@@ -62,13 +62,13 @@ The only required parameter is `account`, all other properties are optional. Def
 
 #### Passport Properties
 
-<table><thead><tr><th>Property</th><th data-type="select">Type</th><th>Description</th><th data-type="checkbox" data-hidden>Required?</th></tr></thead><tbody><tr><td><strong>account</strong></td><td></td><td>The associated address with a DeFi Passport. If an address does not have a DeFi Passport, the component will not display anything.</td><td>true</td></tr><tr><td><strong>width</strong></td><td></td><td>The width of the component.</td><td>false</td></tr><tr><td><strong>height</strong></td><td></td><td>The heigh of the component.</td><td>false</td></tr><tr><td><strong>position</strong></td><td></td><td><p>Behaviour of position:</p><ul><li><code>fixed</code> : Have the passport float in the lower right corner of the screen</li><li><code>flex</code> : Display the passport where the component is placed.</li></ul></td><td>false</td></tr><tr><td><strong>chainId</strong></td><td></td><td>Chain identifier of connected network.</td><td>false</td></tr><tr><td><strong>arcxUrl</strong></td><td></td><td>Endpoint to fetch passport metadata.</td><td>false</td></tr><tr><td><strong>closeable</strong></td><td></td><td>Allow the component to be dismissed.</td><td>false</td></tr><tr><td><strong>showSpinner</strong></td><td></td><td>Shows a loading animation (spinner) while the passport loads.</td><td>false</td></tr><tr><td><strong>analytics</strong></td><td></td><td>Participate in providing metrics to the ARCx engineering team. </td><td>false</td></tr></tbody></table>
+<table><thead><tr><th>Property</th><th data-type="select">Type</th><th>Description</th><th data-type="checkbox" data-hidden>Required?</th></tr></thead><tbody><tr><td><strong>account</strong></td><td></td><td>The address associated with a ARCx Passport. If the address does not have a  Passport, the component will display nothing.</td><td>true</td></tr><tr><td><strong>width</strong></td><td></td><td>The width of the component.</td><td>false</td></tr><tr><td><strong>height</strong></td><td></td><td>The heigh of the component.</td><td>false</td></tr><tr><td><strong>position</strong></td><td></td><td><p>Behaviour of position:</p><ul><li><code>fixed</code> : Have the passport float in the lower right corner of the screen</li><li><code>flex</code> : Display the passport where the component is placed.</li></ul></td><td>false</td></tr><tr><td><strong>chainId</strong></td><td></td><td>Chain identifier of connected network.</td><td>false</td></tr><tr><td><strong>arcxUrl</strong></td><td></td><td>Endpoint to fetch passport metadata.</td><td>false</td></tr><tr><td><strong>closeable</strong></td><td></td><td>Allow the component to be dismissed.</td><td>false</td></tr><tr><td><strong>showSpinner</strong></td><td></td><td>Shows a loading animation (spinner) while the passport loads.</td><td>false</td></tr><tr><td><strong>analytics</strong></td><td></td><td>Participate in providing metrics to the ARCx engineering team. </td><td>false</td></tr></tbody></table>
 
 ### How it works
 
-If an address has no DeFi passport, nothing shall be shown.
+If an address has no Passport, nothing is displayed.
 
-This package simply fetches an address' information from our [API](verifying-passports.md) and uses WebGL + CSS to wrap everything into a nice `React.js` component. It's a light-weight package to help with the integration of the DeFi Passport into any dApp which wants to integrate with us.
+This package fetches an address' information from our [API](verifying-passports.md#get-passports) and uses WebGL + CSS to wrap everything into a nice `React.js` component. It's a light-weight package to help with the integration of the Passport into any dApp which wants to display their integration with us.
 
 
 
