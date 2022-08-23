@@ -1,8 +1,6 @@
 # Daily Score Reward
 
-### Introduction
-
-The Daily Score Reward evaluates borrow usage over the past 120 days relative to an “optimal” borrower archetype and rewards points according to a “Rewards Curve” on a daily basis. The Daily Score Reward aims to simplify the game of building your Credit Score down to a simple rule - “Stay in the Green”. By simply maintaining a borrow usage within the “optimal” green zone, it is possible to reach a score of 999 within 120 days.
+The Daily Score Reward evaluates your “borrow usage” (current LTV as a percentage of max LTV) on ARCx Credit vaults over the prior 120 days relative to a “responsible” borrower archetype and rewards points according to a “Rewards Curve” on a daily basis. In our current iteration, the number of points earned each day peaks when a position is held at 60% borrow usage, and tapers off toward the lower (more conservative) or higher (more aggressive) ranges of the risk curve. By aligning the growth of the Credit Score with borrow usage, we aim to discourage excessive risk exposure, and by extension, mitigate the risk to the protocol and to lenders.
 
 ![Position Summary card showing a borrower with an “optimal” position.](<../../.gitbook/assets/Position Summary Card.png>)
 
@@ -16,7 +14,7 @@ To explain this further, let’s break down the Daily Score Reward.
 
 ### **"Borrow usage"**
 
-Borrow usage refers to the amount borrowed relative to the available credit. Borrow usage is a percentage value, where 100% triggers a liquidation event. Available credit is determined by the amount of collateral you have deposited and the maximum LTV you are offered, which is based on your credit score.
+Borrow usage refers to your current LTV as a percentage of maximum LTV, where 100% triggers a liquidation event for a position.
 
 Borrow usage is shown prominently in the application. Firstly, the Position Summary card shows aggregate borrow usage across all active vaults. Secondly, the Borrow Vaults table shows borrow usage for each individual active vault.
 
@@ -28,9 +26,11 @@ Borrow usage is shown prominently in the application. Firstly, the Position Summ
 ARCx defines the “optimal borrower” as someone who maintains 60% borrow usage across their active positions.
 {% endhint %}
 
-A borrow usage of 60% was selected based on a “community consensus” of borrowers on Compound Finance who borrowed stablecoin debt against Ethereum collateral. In the future, we plan to make this optimal value a dynamic variable based on the real-world actions of borrowers with the highest credit scores.
+The shape of the Rewards Curve, including the optimal borrow usage and the amount of drop-off left or right of the optimal point, are parameters set by the Risk function. In our current iteration, the choice of 60% was based on an analysis of experienced stablecoin borrowers on Compound Finance who use ETH as collateral (i.e. it represents a position that balances efficiency with risk exposure given the volatility of ETH)
 
-![Borrow usage ranges by debt level for borrowers using ETH collateral on Compound Finance.](<../../.gitbook/assets/Borrow usage ranges.png>)
+In this analysis, we found those holding over $1K in debt tend to manage between 50% and 60% of their maximum loan-to-value (LTV). This was further explained through user research, where we found that experienced borrowers with larger loans viewed this range as representing a balanced “safety buffer” for their collateral.
+
+![](<../../.gitbook/assets/Untitled (1).png>)
 
 ARCx asserts that a borrow usage of 60% reflects someone who borrows efficiently, but maintains appropriate risk levels. To implement this assertion we reward points to users based on a defined “Rewards Curve”.
 
@@ -76,7 +76,7 @@ To illustrate the connection between Borrow Usage and the growth of your DeFi Cr
 ### **"Past 120 days"**
 
 {% hint style="info" %}
-Only borrow usage values within the last 120 days are considered when calculating the Daily Score Reward component
+Only borrowing experience within the last 120 days are considered when calculating the Daily Score Reward component
 {% endhint %}
 
 The Daily Score Reward only consider borrowing behavior within the last 120 days. This means a Borrower has to continually borrow or their score will go down over time. However, the Daily Score Reward is designed to allow good Borrowers who maintain the optimal borrow usage to reach the top score of 999 within 120 days, even if they start with a score of 0.
@@ -86,9 +86,9 @@ The selection of 120 days is based on the following considerations:
 * The mark of a reliable Borrower is how well they manage debt through tough market conditions. Historically, the price of Ethereum has never made it more than approximately 2 months without undergoing a crash of more than 10%. As such, we want to ensure that all borrowers who have reached the top score have experienced at least some market volatility in order to gauge how well they borrow.
 * We aim for a compromise between building an engaging Credit Score that the user can grow in a reasonable amount of time, and a score which is not too volatile so a borrower can expect their Score not to change too much day to day.
 
-With these considerations, we find a 120 day window to be appropriate. We define the Score such that the optimum borrower reaches a score of 999 exactly within the window (from a starting Score of 0), and so the optimal daily impact is $$999/120=8.325$$ points per day.
+With these considerations, we find a 120 day window to be appropriate. In our current implementation, we define the Score such that the optimum borrower reaches a score of 999 exactly within the window (from a starting Score of 0), and so the optimal daily impact is $$999/120=8.325$$ points per day.
 
-### **"Hourly basis"**
+### **"Daily basis"**
 
 {% hint style="info" %}
 The daily score reward is calculated by assessing borrow usage at the end of each hour, and it is updated on-chain daily.

@@ -4,10 +4,9 @@ Lending money in DeFi is inherently risky, particularly when Borrowers are anony
 
 As Borrowers improve their DeFi Credit Score and borrow at increasingly higher LTV ratios, ARCx Credit exposes itself to a greater chance of losses from unprofitable liquidations. It is important to note that even over-collateralized positions (i.e. where LTV is less than 100%) can still become under-collateralized by the time of liquidation due to a rapidly falling collateral price, the delay of the liquidator, and slippage. In developing the ARCx Credit product, it was therefore important to appropriately model and manage risk in order to control for losses born through unprofitable liquidations.
 
-Through a combination of the DeFi Credit Score, a three-tiered vault design, dynamic credit limits, self-managed liquidations and revenue inflows, we believe the design of ARCx Credit ensures we can create a sustainable credit-score based lending business.&#x20;
-
 This section covers:&#x20;
 
 1. [Inflows and outflows](inflows-and-outflows.md)
-2. [Cost control mechanisms](./#cost-control-mechanisms)
-3. [Profit modeling](profit-modeling.md)
+2. [Design considerations](design-considerations.md)
+3. [Control parameters](design-considerations.md)
+4. [Profit modeling](control-parameters.md)

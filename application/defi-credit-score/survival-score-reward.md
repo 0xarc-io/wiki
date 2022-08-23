@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The Survival Score Reward evaluates a borrower’s ability to avoid liquidations relative to the rest of the market, rewarding or subtracting points proportional to the “liquidation density” on a given day. Unlike the Daily Score Reward, which looks only at the previous 120 days of borrowing experience, the Survival Score Reward considers the borrowing experience of a wallet address over its entire lifetime. A borrower with previous experience on a selection of third party borrowing platforms will have a DeFi Credit Score between 0 and 300 based on this Score component alone. The Survival Score Reward therefore establishes the minimum bound for the DeFi Credit Score, where the only way a borrower can reach 999 is to borrow on ARCx (by virtue of the Daily Score Reward).
+The Survival Score Reward evaluates a borrower’s ability to avoid liquidations on any [indexed third-party platform](survival-score-reward.md#data-sources) relative to the rest of the market, rewarding or subtracting points proportional to the “liquidation density” on a given day. Unlike the [Daily Score Reward](daily-score-reward.md), which looks only at the previous 120 days of borrowing experience on ARCx Credit, the Survival Score Reward considers the borrowing experience of a wallet address over its entire lifetime outside of ARCx Credit. A borrower with previous experience on a selection of third party borrowing platforms will have a DeFi Credit Score between 0 and 300 based on this Score component alone. The Survival Score Reward therefore establishes the minimum bound for the DeFi Credit Score, where the only way a borrower can reach 999 is to borrow on ARCx (by virtue of the Daily Score Reward).
 
 ### **Score design principles**
 

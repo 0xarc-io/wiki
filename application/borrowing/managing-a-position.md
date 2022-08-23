@@ -2,7 +2,7 @@
 
 ### Connect your wallet to the Polygon Network
 
-ARCx Credit operates on the Polygon Network, a scaling solution for Ethereum. Before interacting with the application, you will need to connect and use your Web3 wallet on the Polygon Network. We recommend using [Metamask wallet](notion://www.notion.so/products/set-up-metamask) as your Web3 wallet, though we support any wallet compatible with [Wallet Connect](https://walletconnect.com/).
+ARCx Credit operates on the Polygon network, a scaling solution for Ethereum. Before interacting with the application, you will need to connect and use your Web3 wallet on the Polygon Network. We recommend using [Metamask wallet](notion://www.notion.so/products/set-up-metamask) as your Web3 wallet, though we support any wallet compatible with [Wallet Connect](https://walletconnect.com/).
 
 * Log in to your wallet
 * Go to[https://chainlist.org/](https://chainlist.org/) site
@@ -24,13 +24,13 @@ Once you have connected your wallet, head over to the Borrow Vaults section of t
 
 Vaults with higher capital efficiency (i.e. higher maximum LTV) can be unlocked as you build your DeFi Credit Score.&#x20;
 
-For more information, see [vault design and credit limits](vault-design-and-credit-limits.md).
+For more information, see [vault design and credit limits](vault-design.md).
 
 ### Deposit collateral
 
 You will now find yourself on the vault action page. To deposit collateral, (1) select “deposit” from the action selector dropdown; (2) select the amount of collateral you would like to deposit (or hit the “max” button); and (3) click deposit. Note, the first time you do this, you will need to approve the use of your collateral by signing a transaction with your Web3 wallet.
 
-![Vault Action Page (highlighting input fields and transaction initiation button)](<../../.gitbook/assets/Vault action page.png>)
+![](<../../.gitbook/assets/CleanShot 2022-08-22 at 16.34.54@2x.png>)
 
 ### Borrow stablecoins
 
@@ -38,13 +38,11 @@ Once you have collateral deposited into a vault, you will then be able to start 
 
 As shown in the screenshot below, to do this, (1) select “borrow” from the action selector dropdown; (2) select the amount you wish to borrow (or hit either the “optimize” or “max” buttons); and (3) click borrow. The “optimize” button calculates and pre-fills the amount you should borrow or repay in order to maximize the growth of your DeFi Credit Score.
 
-![Vault Action Page (highlighting input fields and transaction initiation button)](<../../.gitbook/assets/Vault action page 2.png>)
+![Vault Action Page (highlighting input fields and transaction initiation button)](<../../.gitbook/assets/CleanShot 2022-08-22 at 16.38.20@2x.png>)
 
-Below the input field, you will notice the transaction impact values changing. As shown in the screenshot below, under (1), you will find your anticipated borrow usage alongside an explanation of how the transaction will impact the growth of your DeFi Credit Score going forward. Under (2), you will find the impact of the transaction on your vault position, including deposited collateral, borrowed amount, available credit, and collateral liquidation price.
+Below the input field, you will notice the transaction impact values changing. You will find the impact of the transaction on your vault position, including current LTV, deposited collateral, borrowed amount, available credit, and collateral liquidation price.
 
 Note, "available credit" is based on either the deposited collateral and maximum LTV, or the vault-specific credit limit (whichever is lower).&#x20;
-
-![Vault Action Page (highlighting vault-level position information)](<../../.gitbook/assets/Vault action page 3.png>)
 
 ### View your positions
 
@@ -53,8 +51,6 @@ With one or more active vaults, you can view the status of your positions from t
 ![Borrow Home Page (highlighting the Position Summary card and Vault section)](<../../.gitbook/assets/Borrow home page 2.png>)
 
 To view detailed information at an individual vault-level, simply return to the vault action page. From here, you will find your vault-level borrow usage, a recommendation for what to do to optimally grow your DeFi Credit Score, and other basic position information.
-
-![Vault Action Page (highlighting vault-level position information)](<../../.gitbook/assets/Vault action page 4.png>)
 
 ### Avoid liquidation
 
@@ -69,5 +65,3 @@ With an active vault, you can easily manage your positions by returning to the V
 ### Exiting your position
 
 To completely exit a vault, you will need to repay all of your debt and then withdraw all of your collateral. To do this, you can simply click the “max” button beside the input field to ensure everything is repaid and withdrawn from the vault. If you follow these steps, the transaction initiation button will read “Exit”, and this will completely empty the vault of your collateral.
-
-![Vault Action Page (showing an exit transaction)](<../../.gitbook/assets/Vault action page 5.png>)

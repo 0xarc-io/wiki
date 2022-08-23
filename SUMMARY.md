@@ -7,14 +7,14 @@
 ## 📲 Application
 
 * [DeFi Credit Score](application/defi-credit-score/README.md)
-  * [Background](application/defi-credit-score/background.md)
+  * [Background & Opportunity](application/defi-credit-score/background-and-opportunity.md)
   * [Daily Score Reward](application/defi-credit-score/daily-score-reward.md)
   * [Survival Score Reward](application/defi-credit-score/survival-score-reward.md)
   * [Liquidation Penalty](application/defi-credit-score/liquidation-penalty.md)
   * [Data Sources](application/defi-credit-score/data-sources.md)
 * [Borrowing](application/borrowing/README.md)
   * [Managing a position](application/borrowing/managing-a-position.md)
-  * [Vault design and credit limits](application/borrowing/vault-design-and-credit-limits.md)
+  * [Vault design](application/borrowing/vault-design.md)
   * [Liquidations](application/borrowing/liquidations.md)
   * [Fee Structure](application/borrowing/fee-structure.md)
 * [Supplying](application/supplying/README.md)
@@ -25,7 +25,8 @@
 
 * [Risk management](risk-and-infrastructure/risk-management/README.md)
   * [Inflows and outflows](risk-and-infrastructure/risk-management/inflows-and-outflows.md)
-  * [Cost control mechanisms](risk-and-infrastructure/risk-management/cost-control-mechanisms.md)
+  * [Design considerations](risk-and-infrastructure/risk-management/design-considerations.md)
+  * [Control parameters](risk-and-infrastructure/risk-management/control-parameters.md)
   * [Profit modeling](risk-and-infrastructure/risk-management/profit-modeling.md)
 * [Infrastructure](risk-and-infrastructure/infrastructure/README.md)
   * [Context and challenges](risk-and-infrastructure/infrastructure/context-and-challenges.md)

@@ -2,7 +2,7 @@
 
 ### Connect your wallet to the Polygon Network
 
-ARCx Credit operates on the Polygon Network, a scaling solution for Ethereum. Before interacting with the application, you will need to connect and use your Web3 wallet on the Polygon Network. We recommend using Metamask wallet as your Web3 wallet, though we support any wallet compatible with [Wallet Connect](https://walletconnect.com/).
+ARCx Credit operates on the Polygon network, a scaling solution for Ethereum. Before interacting with the application, you will need to connect and use your Web3 wallet on the Polygon Network. We recommend using Metamask wallet as your Web3 wallet, though we support any wallet compatible with [Wallet Connect](https://walletconnect.com/).
 
 * Log in to your wallet
 * Go to[https://chainlist.org/](https://chainlist.org/) site

@@ -1,7 +1,5 @@
 # Liquidations
 
-### Introduction
-
 A liquidation is a process whereby the collateral deposited in a vault is sold when the Borrow Usage on that vault exceeds 100%. This will happen when the collateral decreases in value or the borrowed debt increases in value against each other. During a liquidation event, the Borrower’s collateral is sold at a discount to a liquidator in return for repaying a Borrower’s debt
 
 ### Liquidation process
@@ -14,13 +12,11 @@ This mechanism safeguards ARCx Credit from accruing toxic debt.
 
 ### ARCx liquidation engine
 
-ARCx Credit has implemented its own liquidation engine to safeguard against the risk of unprofitable liquidations (i.e. toxic debt). By doing so, ARCx Credit is able to maximize the capital efficiency it offers to Borrowers (e.g. up to 100% LTV on WETH) without requiring large discounts to incentivize liquidators, which cuts into profitability.
+To ensure that at-risk collateral is sold as soon as is required, ARCx Credit has also deployed its own liquidation engine (instead of solely relying on third party liquidation bots).&#x20;
+
+By managing our own liquidations, all revenue generated from the liquidation is kept by the protocol and can be fed back into the supply pool to recover losses due to toxic debt. Reliance on external liquidators has the benefit of security in times of significant volatility, however it also syphons revenue from the protocol to pay the liquidators. This loss of revenue actually aggravates the potential for toxic debt and the higher the liquidation discount, the lower the LTV threshold is for toxic debt to be left in the system.
 
 The contract for our liquidation engine can be found [here](https://polygonscan.com/address/0x6742765a665867B0C35b94f213aE8f627b40C6fa#code).
-
-It is recognized that external liquidators may front-run the ARCx liquidation engine. This consideration is factored into our profit modeling.
-
-For more information, see [Profit model](../../risk-and-infrastructure/risk-management/).
 
 ### Net profit or loss from liquidations
 
