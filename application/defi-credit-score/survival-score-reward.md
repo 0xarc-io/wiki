@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The Survival Score Reward evaluates a borrower’s ability to avoid liquidations on any [indexed third-party platform](survival-score-reward.md#data-sources) relative to the rest of the market, rewarding or subtracting points proportional to the “liquidation density” on a given day. Unlike the [Daily Score Reward](daily-score-reward.md), which looks only at the previous 120 days of borrowing experience on ARCx Credit, the Survival Score Reward considers the borrowing experience of a wallet address over its entire lifetime outside of ARCx Credit. A borrower with previous experience on a selection of third party borrowing platforms will have a DeFi Credit Score between 0 and 300 based on this Score component alone. The Survival Score Reward therefore establishes the minimum bound for the DeFi Credit Score, where the only way a borrower can reach 999 is to borrow on ARCx (by virtue of the Daily Score Reward).
+The Survival Score Reward evaluates a borrower’s ability to avoid liquidations on any [indexed third-party platform](survival-score-reward.md#data-sources) relative to the rest of the market, rewarding or subtracting points proportional to the “liquidation density” on a given day. Unlike the [Daily Score Reward](daily-score-reward.md), which looks only at the previous 120 days of borrowing experience on ARCx Credit, the Survival Score Reward considers the borrowing experience of a wallet address over its entire lifetime outside of ARCx Credit. A borrower with previous experience on a selection of third party borrowing platforms will have a DeFi Credit Score between 0 and 760 based on this Score component alone. The Survival Score Reward therefore establishes the minimum bound for the DeFi Credit Score, where the only way a borrower can reach 999 is to borrow on ARCx (by virtue of the Daily Score Reward).
 
 ### **Score design principles**
 
@@ -93,7 +93,7 @@ This method satisfies the following:
 * Liquidations negatively impact the total. The larger the density of liquidations at the time of liquidation, the larger the impact of that liquidation. Conversely, avoiding a liquidation during these periods rewards the borrower more.
 * The more “liquidation peaks” the borrow survives, the higher their score will be. A borrower who only survives one peak will score lower than a borrower who survives two, and so on.
 
-A borrower receives a separate score for each 3rd party lending platform they have borrowed on. This is limited to platforms we have so far indexed. So to compute their final Survival Score, we combine the individual scores to a value between 0 and 300. This Survival Score is then added into the DeFi Credit Score.
+A borrower receives a separate score for each 3rd party lending platform they have borrowed on. This is limited to platforms we have so far indexed. So to compute their final Survival Score, we combine the individual scores to a value between 0 and 760. This Survival Score is then added into the DeFi Credit Score.
 
 ### Data sources
 
